@@ -6,6 +6,8 @@
 
  -- Elrond, half elven, son of Eärendil and Elwing.
 
+ By that I mean, these mods are a very large and complicated project... and it will take a very long time to create. But I'll try.
+
  The Lord of the Rings Mod: Legacy was a very great work, bringing The Lord of the Rings to minecraft; it was the best I've seen, and I doubt any Lord of the Rings Mod will ever come near it.
  Yet still, there is some attempt to create a new mod which could rival it. The Lord of the Rings Mod: Renewed was worked on also be Mevans, but as it has been two years since the last update to it, and it seems he has stopped working on it, now there is LOTR: Renewed Extended which seeks to fill in the blanks and bring The Lord of the Rings Mod: Renewed to the glory of The Lord of the Rings Mod: Legacy.
 
