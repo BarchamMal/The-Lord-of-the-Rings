@@ -1,6 +1,9 @@
 There are a lot, I mean _a lot_ of features, items, and blocks to add here.
 The ones listed here are only a few, and I'll have to read the Silmarilion, The Lord of The Rings, and The Hobbit, and write down all of them, but this will do for now.
 
+> [!NOTE]
+> This is mostly artist work, though all of it will need coded, the bulk of it is textures and models.
+
 ## Ores
 - Mithril Ore
 - Ruby Ore
