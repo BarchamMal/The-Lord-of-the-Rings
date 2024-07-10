@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "the-lord-of-the-rings-mod-biomes:block/plum_leaves_fruiting"
+  }
+}

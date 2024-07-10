@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_up",
+  "textures": {
+    "texture": "the-lord-of-the-rings-mod-biomes:block/plum_planks"
+  }
+}

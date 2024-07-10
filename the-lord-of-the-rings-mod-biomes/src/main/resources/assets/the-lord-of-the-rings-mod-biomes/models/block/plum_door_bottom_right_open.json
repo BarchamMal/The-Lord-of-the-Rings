@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right_open",
+  "textures": {
+    "top": "the-lord-of-the-rings-mod-biomes:block/plum_door_top",
+    "bottom": "the-lord-of-the-rings-mod-biomes:block/plum_door_bottom"
+  }
+}

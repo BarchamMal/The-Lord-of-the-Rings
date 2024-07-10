@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "the-lord-of-the-rings-mod-biomes:block/plum_planks"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "the-lord-of-the-rings-mod-biomes:block/plum_log_top_stripped",
+    "side": "the-lord-of-the-rings-mod-biomes:block/plum_log_side_stripped"
+  }
+}

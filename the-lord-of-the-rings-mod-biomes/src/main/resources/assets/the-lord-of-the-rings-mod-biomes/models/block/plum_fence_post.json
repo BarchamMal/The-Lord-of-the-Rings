@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "the-lord-of-the-rings-mod-biomes:block/plum_planks"
+  }
+}
