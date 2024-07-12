@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "the-lord-of-the-rings-mod-biomes:block/plum_planks",
-    "top": "the-lord-of-the-rings-mod-biomes:block/plum_planks",
-    "side": "the-lord-of-the-rings-mod-biomes:block/plum_planks"
-  }
-}

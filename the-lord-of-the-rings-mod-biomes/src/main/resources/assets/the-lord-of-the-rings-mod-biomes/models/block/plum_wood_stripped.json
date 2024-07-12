@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "the-lord-of-the-rings-mod-biomes:block/plum_log_side_stripped"
-  }
-}
