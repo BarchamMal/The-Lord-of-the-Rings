@@ -21,3 +21,7 @@ The current branches which I have and am working on are:
 - [The Lord of The Rings Mod: Biomes](https://github.com/BarchamMal/The-Lord-of-the-Rings/tree/LoTR-Biomes)
 
 Take a look at the TODO.md file in each one for what needs done.
+
+> [!IMPORTANT]
+> I am now finding that my art skills leave ***much** to be desired*!
+> If you know how to make pixel art please take a look at the existing textures and improve them if you can!
