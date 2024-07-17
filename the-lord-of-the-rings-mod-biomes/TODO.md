@@ -14,6 +14,7 @@ The ones listed here are only a few, and I'll have to read the Silmarilion, The 
 - Opal Ore
 - Beryl Ore
 - Garnet Ore
+- Salt Ore
 
 ## Flowers/Plants
 - Elanor
