@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "the-lord-of-the-rings-mod-biomes:block/plum_slab"
+    },
+    "type=double": {
+      "model": "the-lord-of-the-rings-mod-biomes:block/plum_planks"
+    },
+    "type=top": {
+      "model": "the-lord-of-the-rings-mod-biomes:block/plum_slab_top"
+    }
+  }
+}

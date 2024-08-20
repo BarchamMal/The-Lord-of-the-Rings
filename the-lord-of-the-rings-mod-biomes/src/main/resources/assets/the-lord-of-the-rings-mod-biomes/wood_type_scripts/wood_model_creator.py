@@ -34,7 +34,7 @@ def process_woods(yaml_file, output_dir, template_dir):
         "door_top_left_open", "door_top_right_open", "door_bottom_left_open", "door_bottom_right_open",
         "pressure_plate", "pressure_plate_down",
         "button", "button_pressed", "button_inventory",
-        "sapling",
+        "sapling", "sign", "hanging_sign",
         "wood", "wood_stripped",
         "planks"
     ]

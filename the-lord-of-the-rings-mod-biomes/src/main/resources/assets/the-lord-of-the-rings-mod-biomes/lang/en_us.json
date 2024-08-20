@@ -1,0 +1,25 @@
+{
+    "itemGroup.the-lord-of-the-rings-mod-biomes.biomes_group": "LoTR: Biomes",
+
+
+    "item.the-lord-of-the-rings-mod-biomes.plum": "Plum",
+    "block.the-lord-of-the-rings-mod-biomes.plum_sapling": "Plum Sapling",
+    "block.the-lord-of-the-rings-mod-biomes.plum_leaves": "Plum Leaves",
+    "item.the-lord-of-the-rings-mod-biomes.plum_boat_chest": "Plum Boat with Chest",
+    "item.the-lord-of-the-rings-mod-biomes.plum_boat": "Plum Boat",
+    "block.the-lord-of-the-rings-mod-biomes.plum_hanging_sign": "Plum Hanging Sign",
+    "block.the-lord-of-the-rings-mod-biomes.plum_sign": "Plum Sign",
+    "block.the-lord-of-the-rings-mod-biomes.plum_button": "Plum Button",
+    "block.the-lord-of-the-rings-mod-biomes.plum_pressure_plate": "Plum Pressure Plate",
+    "block.the-lord-of-the-rings-mod-biomes.plum_trapdoor": "Plum Trapdoor",
+    "block.the-lord-of-the-rings-mod-biomes.plum_door": "Plum Door",
+    "block.the-lord-of-the-rings-mod-biomes.plum_fence_gate": "Plum Fence Gate",
+    "block.the-lord-of-the-rings-mod-biomes.plum_fence": "Plum Fence",
+    "block.the-lord-of-the-rings-mod-biomes.plum_slab": "Plum Slab",
+    "block.the-lord-of-the-rings-mod-biomes.plum_stairs": "Plum Stairs",
+    "block.the-lord-of-the-rings-mod-biomes.plum_planks": "Plum Planks",
+    "block.the-lord-of-the-rings-mod-biomes.plum_wood_stripped": "Stripped Plum Wood",
+    "block.the-lord-of-the-rings-mod-biomes.plum_log_stripped": "Stripped Plum Log",
+    "block.the-lord-of-the-rings-mod-biomes.plum_wood": "Plum Wood",
+    "block.the-lord-of-the-rings-mod-biomes.plum_log": "Plum Logs"
+}

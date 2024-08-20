@@ -1,0 +1,7 @@
+{
+      "parent": "minecraft:item/generated",
+      "textures": {
+        "layer0": "the-lord-of-the-rings-mod-biomes:item/olive_chest_boat"
+      }
+    }
+    

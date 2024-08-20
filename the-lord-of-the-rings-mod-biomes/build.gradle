@@ -11,15 +11,21 @@ base {
 }
 
 repositories {
-	// Add repositories to retrieve artifacts from in here.
-	// You should only use this when depending on other mods because
-	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
-	// for more information about repositories.
+	maven {
+		name = "CurseForge"
+		url = "https://www.cursemaven.com"
+		content {
+			includeGroup "curse.maven"
+		}
+	}
+	maven {
+		name = 'TerraformersMC'
+		url = 'https://maven.terraformersmc.com/'
+	}
 }
 
 loom {
-	splitEnvironmentSourceSets()
+    splitEnvironmentSourceSets()
 
 	mods {
 		"the-lord-of-the-rings-mod-biomes" {
@@ -38,6 +44,12 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	// Barch-lib, a required library.
+	modImplementation "curse.maven:barch-lib-1071113:${project.barch_version}"
+
+	// Terraform, a required library.
+	include (modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:11.0.0-alpha.1")
 	
 }
 

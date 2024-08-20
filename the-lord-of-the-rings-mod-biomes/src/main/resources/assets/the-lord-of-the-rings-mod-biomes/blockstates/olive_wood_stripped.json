@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "the-lord-of-the-rings-mod-biomes:block/olive_wood_stripped",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "the-lord-of-the-rings-mod-biomes:block/olive_wood_stripped"
+    },
+    "axis=z": {
+      "model": "the-lord-of-the-rings-mod-biomes:block/olive_wood_stripped",
+      "x": 90
+    }
+  }
+}

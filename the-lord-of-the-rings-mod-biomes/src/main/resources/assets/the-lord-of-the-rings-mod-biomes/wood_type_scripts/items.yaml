@@ -1,0 +1,30 @@
+flats:
+  - boat
+  - boat_chest
+  - sign
+  - hanging_sign
+  - door
+  - sapling:
+      texture: "the-lord-of-the-rings-mod-biomes:block/{wood_type}_sapling"
+blocks:
+  - leaves:
+      model: "the-lord-of-the-rings-mod-biomes:block/{wood_type}_leaves_stage_0"
+  - log
+  - log_stripped
+  - wood
+  - wood_stripped
+  - planks
+  - stairs
+  - slab
+  - trapdoor:
+      model: "the-lord-of-the-rings-mod-biomes:block/{wood_type}_trapdoor_bottom"
+  - pressure_plate
+  - button:
+      model: "the-lord-of-the-rings-mod-biomes:block/{wood_type}_button_inventory"
+  - fence_gate
+  - fence:
+      model: "the-lord-of-the-rings-mod-biomes:block/{wood_type}_fence_inventory"
+
+custom_flats:
+  - plum
+  - olives

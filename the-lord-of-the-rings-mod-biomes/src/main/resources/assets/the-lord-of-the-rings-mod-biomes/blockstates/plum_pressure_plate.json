@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "the-lord-of-the-rings-mod-biomes:block/plum_pressure_plate"
+    },
+    "powered=true": {
+      "model": "the-lord-of-the-rings-mod-biomes:block/plum_pressure_plate_down"
+    }
+  }
+}

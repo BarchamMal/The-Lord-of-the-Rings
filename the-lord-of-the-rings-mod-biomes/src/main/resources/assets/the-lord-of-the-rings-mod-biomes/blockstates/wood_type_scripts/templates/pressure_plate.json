@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "the-lord-of-the-rings-mod-biomes:block/{wood_type}_pressure_plate"
+    },
+    "powered=true": {
+      "model": "the-lord-of-the-rings-mod-biomes:block/{wood_type}_pressure_plate_down"
+    }
+  }
+}

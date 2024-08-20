@@ -1,0 +1,543 @@
+
+
+- shire:
+    mountains: "white downs, chalky hills"
+    hills: "green hill country, unwooded hills"
+    forest: "woody end, bindbole wood, not too thick woods"
+    marsh: "rushock bog, reeds, channels, pools, bits of solid ground and willow trees"
+    plains: "long bottom and white furrows, mostly flat plains with very little trees"
+
+    tree_types:
+      - "apple"
+      - "oak"
+      - "pine"
+      - "rowan"
+      - "birch"
+      - "willow"
+      - "elder"
+      - "hawthorn"
+      - "holly"
+
+    plant_types:
+      - "wild pipe-weed"
+      - "lilies"
+      - "berry bushes"
+      - "shrubs"
+      - "wildflowers"
+      - "mushrooms"
+      - "heather"
+      - "grasses"
+
+    stone_type:
+      - "grey, soft stone"
+      - "chalky, white stone"
+      - "sandstone"
+
+    animals:
+      - "deer"
+      - "rabbits"
+      - "birds"
+      - "foxes"
+      - "raccoons"
+      - "hedgehogs"
+      - "moles"
+      - "badgers"
+      - "squirrels"
+
+    structures:
+      - "small, common hobbit holes and houses"
+      - "varying size hobbit towns"
+      - "small and large farms"
+      - "taverns"
+      - "mills"
+      - "bridges"
+      - "small market squares"
+
+- bree:
+    mountains: ~
+    hills: "all over the place, bree was a hill"
+    forest: "the chetwood, pretty thick wood, nothing like fangorn or the old forest"
+    marsh: "the midge water marshes, mostly mud and water, very little solid ground and a few willows"
+    plains: "staddle and combe, mostly flat, with a decent amount of trees"
+
+    tree_types:
+      - "oak"
+      - "beech"
+      - "willow"
+      - "birch"
+      - "elm"
+      - "maple"
+
+    plant_types:
+      - "brambles"
+      - "ferns"
+      - "wildflowers"
+      - "moss"
+      - "reeds"
+      - "heather"
+      - "shrubs"
+
+    stone_type:
+      - "hard, grey stone"
+      - "limestone"
+
+    animals:
+      - "deer"
+      - "rabbits"
+      - "badgers"
+      - "foxes"
+      - "wolves"
+      - "owls"
+      - "hawks"
+      - "mice"
+      - "frogs"
+
+    structures:
+      - "small houses and cottages"
+      - "the Prancing Pony inn"
+      - "stone walls and fences"
+      - "farms and barns"
+      - "windmills"
+      - "stone bridges"
+      - "market square"
+
+- lindon:
+    mountains: ~
+    hills: "all over lindon, green and gentle, with sparse trees"
+    forest: "not very common, not very thick"
+    marsh: ~
+    plains: "all over lindon, flat, with no trees"
+
+- blue_mountains:
+    mountains: "most of the blue mountains, tall and pale grey blue"
+    hills: "here and there in the blue mountains, small and gentle and smooth"
+    forest: "flatter parts with soil and tall evergreen trees"
+    marsh: ~
+    plains: "small clearings, very rare, with no trees"
+
+- old_forest:
+    mountains: ~
+    hills: "dark tree cloud hills, but with less trees than the rest of the forest"
+    forest: "thick and dark, with tall and thick trees"
+    marsh: "wet boggy areas especially near the river"
+    plains: "small rare clearings devoid of trees"
+
+- emyn_uial:
+    mountains: "short mountains devoid of trees and grass, with small springs here and there"
+    hills: "rocky dead areas with few trees and arid grass"
+    forest: "the flattest areas with the barest pretence of soil, home to short trees and thick grasses"
+    marsh: ~
+    plains: ~
+
+- north_downs:
+    mountains: ~
+    hills: "rugged hills with steep slopes, covered in grass and heather"
+    forest: "small, scattered woodlands, mostly in the valleys"
+    marsh: ~
+    plains: "open fields with patches of rocky ground and scattered ruins"
+
+- weather_hills:
+    mountains: ~
+    hills: "rugged and rocky, mostly barren with short grasses and scattered shrubs"
+    forest: "sparse woodland, mostly around the base of the hills, with stunted trees"
+    marsh: ~
+    plains: "lowlands at the base of the hills, dry and windswept with little vegetation"
+
+- barrow_downs:
+    mountains: ~
+    hills: "ancient burial mounds, covered with grass, eerie and desolate"
+    forest: "sparse trees around the edges, mostly ancient and twisted"
+    marsh: ~
+    plains: "grassy plains around the mounds, mostly treeless and windswept"
+
+- south_downs:
+    mountains: ~
+    hills: "gentle, rolling hills with patches of forest and grassy slopes"
+    forest: "small woodlands, mostly in the valleys between the hills"
+    marsh: ~
+    plains: "flat areas between the hills, with fertile soil and scattered groves"
+
+- far_downs:
+    mountains: "low, chalky ridges with exposed rock, more like steep hills"
+    hills: "smooth, grassy hills with few trees, extending far into the west"
+    forest: "sparse woods, mainly small groves and isolated trees"
+    marsh: ~
+    plains: "open, rolling fields with little vegetation, mostly grasslands"
+
+- dunland:
+    mountains: "the southern slopes of the misty mountains, rugged and steep"
+    hills: "rocky hills with sparse vegetation, mostly heather and scrub"
+    forest: "small, dense woods in sheltered valleys, mainly conifers"
+    marsh: "occasional wet lowlands, especially near rivers and streams"
+    plains: "windswept, grassy moors with little tree cover"
+
+- eregion:
+    mountains: "the western foothills of the misty mountains, less steep but still rugged"
+    hills: "gently rolling hills with remnants of ancient Elven architecture"
+    forest: "light woodlands, primarily oak and beech, remnants of the ancient forests"
+    marsh: ~
+    plains: "open meadows, with scattered ruins and ancient Elven paths"
+
+- minhiriath:
+    mountains: ~
+    hills: "low, rolling hills with sparse forests and open grasslands"
+    forest: "thick, ancient forests near the Gwathló (Greyflood) River"
+    marsh: "wetlands along the coast and near river mouths, with reeds and pools"
+    plains: "wide, open plains, with patches of wild grass and few trees"
+
+- enedwaith:
+    mountains: ~
+    hills: "rolling hills with rocky outcrops and patches of forest"
+    forest: "large tracts of ancient woodlands, with tall trees and dense undergrowth"
+    marsh: "wetlands near the river Isen, with reeds, pools, and willow trees"
+    plains: "open, grassy plains with few trees, mostly wild and untamed"
+
+- eryn_vorn:
+    mountains: ~
+    hills: "low, rolling hills with dense underbrush and thick tree cover"
+    forest: "dark, ancient forest, dense and untamed, filled with towering oaks and thick undergrowth"
+    marsh: "small, hidden marshes with boggy ground and twisted trees"
+    plains: "small clearings, rare and usually overgrown with tall grass and shrubs"
+
+- rivendell:
+    mountains: "the misty mountains, towering and majestic, forming a protective barrier"
+    hills: "gentle, forested hills surrounding the hidden valley, serene and peaceful"
+    forest: "light, serene woods with ancient, tall trees, providing a tranquil atmosphere"
+    marsh: ~
+    plains: "open meadows within the valley, filled with soft grass and wildflowers"
+
+- ettenmoors:
+    mountains: "the troll-fells, rocky and inhospitable peaks, home to trolls and other creatures"
+    hills: "barren, windswept hills with jagged rocks and sparse vegetation"
+    forest: "dark, foreboding woods, twisted trees, and thick underbrush, often shrouded in mist"
+    marsh: "treacherous bogs, with deep, sucking mud and hidden dangers"
+    plains: "bleak, windswept moors, with little more than hardy grass and scrub"
+
+- trollshaws:
+    mountains: ~
+    hills: "rough, hilly terrain, with scattered boulders and dense thickets"
+    forest: "thick, wild woods with ancient trees, twisted roots, and hidden paths"
+    marsh: "small, damp areas in the low valleys, with muddy ground and stagnant pools"
+    plains: "occasional clearings, overgrown with tall grass and wildflowers, but often rocky"
+
+- angmar:
+    mountains: ~
+    hills: "cold, barren hills with jagged rocks and sparse, thorny bushes"
+    forest: "dark, twisted forests, with dead or dying trees, filled with a sense of dread"
+    marsh: "frozen or half-frozen marshes, with icy water and treacherous footing"
+    plains: "desolate, windswept plains, with hard, frozen ground and little vegetation"
+
+- mountains_of_angmar:
+    mountains: "tall, forbidding peaks, often covered in snow and ice, with sharp ridges and cliffs"
+    hills: "rocky foothills with sparse, stunted vegetation and cold winds"
+    forest: "thin, dark forests clinging to the lower slopes, twisted and gnarled"
+    marsh: ~
+    plains: "narrow, rocky valleys with little vegetation, harsh and inhospitable"
+
+- misty_mountains:
+    mountains: "towering, snow-capped peaks, rugged and impassable in many places"
+    hills: "steep, rocky hills leading up to the mountains, with little vegetation"
+    forest: "dense forests at the lower elevations, with tall, ancient trees"
+    marsh: "occasional boggy areas near the base, especially where streams gather"
+    plains: "narrow valleys with rocky, uneven ground, often filled with streams or small lakes"
+
+- white_mountains:
+    mountains: "majestic, snow-covered peaks with steep, craggy cliffs and high passes"
+    hills: "rolling foothills with scattered forests and rich, green grass"
+    forest: "thick woodlands at the base, with tall pines and ancient oaks"
+    marsh: ~
+    plains: "wide, fertile valleys between the mountains, with lush meadows and flowing rivers"
+
+- isengard:
+    mountains: "the southernmost peaks of the misty mountains, rugged and shadowed"
+    hills: "rocky, barren hills surrounding the fortress, with little to no vegetation"
+    forest: "the remnants of once-great forests, now largely cut down or burnt"
+    marsh: ~
+    plains: "flat, hard-packed ground, often scarred by industry and war"
+
+- westfold:
+    mountains: "the western slopes of the white mountains, rugged and steep"
+    hills: "rolling hills leading up to the mountains, covered in grass and low shrubs"
+    forest: "scattered woodlands in the valleys, with tall pines and beech trees"
+    marsh: "small, wet lowlands near streams, with reeds and shallow pools"
+    plains: "wide, open plains with tall grasses, ideal for grazing horses"
+
+- eastfold:
+    mountains: "the eastern slopes of the white mountains, less rugged but still steep"
+    hills: "gentle, rolling hills with patches of forest and grassland"
+    forest: "light woodlands scattered across the hills, primarily oak and birch"
+    marsh: "occasional marshy areas near the Entwash river, with reeds and willows"
+    plains: "vast, open plains with tall, golden grass, stretching towards the Anduin"
+
+- the_wold:
+    mountains: ~
+    hills: "low, grassy hills with few trees, mostly near the edges of the region"
+    forest: "sparse woodlands, mostly along the riverbanks, with willows and alders"
+    marsh: "marshy areas near the mouths of rivers, with reeds and boggy ground"
+    plains: "wide, flat plains with tall grass, often swept by winds from the north"
+
+- west_emnet:
+    mountains: ~
+    hills: "gentle, rolling hills, covered in lush grass, perfect for grazing horses"
+    forest: "scattered copses of trees, primarily along watercourses, with oak and ash"
+    marsh: ~
+    plains: "vast, open grasslands, stretching as far as the eye can see, with tall, golden grass"
+
+- east_emnet:
+    mountains: ~
+    hills: "slightly more pronounced hills than the west, with the occasional outcrop"
+    forest: "small clusters of trees, mainly along the borders of rivers and streams"
+    marsh: "some marshy areas near the Entwash, with reeds and boggy ground"
+    plains: "expansive plains, with tall grass waving in the wind, stretching towards the Anduin"
+
+- field_of_celebrant:
+    mountains: ~
+    hills: "low, grassy hills along the edges, rolling gently towards the plains"
+    forest: "sparse woodlands along the banks of the Anduin, with willows and poplars"
+    marsh: "damp areas near the rivers, with reeds and shallow pools"
+    plains: "broad, flat grasslands, rich and green, often bathed in the golden light of the sun"
+
+- lorien:
+    mountains: ~
+    hills: "gentle, grassy hills, often covered in golden elanor and niphredil"
+    forest: "thick, ancient forests of golden-leaved mallorn trees, with a mystical, ethereal atmosphere"
+    marsh: ~
+    plains: "small clearings within the woods, filled with soft grass and flowering plants"
+
+- gladden_fields:
+    mountains: ~
+    hills: "low, gentle hills near the edges of the marshes, often with sparse vegetation"
+    forest: "scattered, small groves of trees, mostly willows and alders, near the marshes"
+    marsh: "vast, extensive marshlands with reeds, shallow pools, and patches of solid ground"
+    plains: "narrow strips of grassy land between the marshes, with tall, reedy grasses"
+
+- anduin_hills:
+    mountains: ~
+    hills: "rocky, steep hills that run alongside the Anduin, covered with scrub and rough grass"
+    forest: "scattered woodlands on the lower slopes, mainly birch and pine, with undergrowth"
+    marsh: "small, isolated marshes near the river, with reeds and boggy terrain"
+    plains: "narrow, grassy plains along the riverbanks, with a mix of wildflowers and tough grasses"
+
+- grey_mountains:
+    mountains: "towering, cold peaks with jagged cliffs, often covered in snow and ice"
+    hills: "rocky foothills with sparse, hardy vegetation, mainly low shrubs and tough grasses"
+    forest: "dark, dense forests of evergreen trees in the lower regions, with thick undergrowth"
+    marsh: ~
+    plains: "narrow, rocky valleys with sparse grass, often swept by cold winds"
+
+- anorien:
+    mountains: "the northern foothills of the white mountains, rugged but fertile"
+    hills: "rolling, green hills dotted with patches of forest and open grassland"
+    forest: "scattered woods of oak and beech, especially near the mountains"
+    marsh: "small, isolated marshes near rivers, with reeds and shallow waters"
+    plains: "wide, open plains, rich and fertile, used for agriculture and grazing"
+
+- lamedon:
+    mountains: "the southern peaks of the white mountains, rugged and rocky, with steep cliffs"
+    hills: "rolling, grassy hills leading up to the mountains, dotted with small farms and vineyards"
+    forest: "scattered woodlands in the valleys, with oak and chestnut trees"
+    marsh: ~
+    plains: "broad, fertile plains along the rivers, used for farming and grazing"
+
+- pinnath_gellin:
+    mountains: ~
+    hills: "green hills, steep and rolling, covered in lush grass and small shrubs"
+    forest: "small patches of woodland, mainly in the lower valleys, with oak and beech"
+    marsh: ~
+    plains: "small, grassy plains nestled between the hills, used for grazing sheep"
+
+- belfalas:
+    mountains: "the southern slopes of the white mountains, descending sharply to the coast"
+    hills: "gentle hills along the coast, covered in vineyards and olive groves"
+    forest: "wooded areas inland, with a mix of pine, cypress, and olive trees"
+    marsh: "coastal marshes near river mouths, with reeds and salt-tolerant plants"
+    plains: "wide, coastal plains with sandy soil, used for farming and grazing"
+
+- lebennin:
+    mountains: "the southernmost peaks of the white mountains, rugged and rocky with steep slopes"
+    hills: "rolling, fertile hills dotted with farms, vineyards, and small woodlands"
+    forest: "scattered groves of olive and cypress trees, especially near rivers"
+    marsh: "small, isolated marshes near the rivers, with reeds and boggy ground"
+    plains: "wide, fertile plains used for agriculture, with rich soil and lush grass"
+
+- ithilien:
+    mountains: "the eastern foothills of the ephel dúath, rugged and shadowed"
+    hills: "wooded hills with a mix of ancient forests and new growth, lush and green"
+    forest: "dense forests, rich with life, filled with oak, beech, and cedar trees"
+    marsh: "small, hidden marshes near streams, with reeds and thick vegetation"
+    plains: "narrow, grassy plains along the riverbanks, teeming with wildflowers"
+
+- tolfalas:
+    mountains: ~
+    hills: "low, rolling hills covered in grass and coastal shrubs"
+    forest: "scattered woodlands, mainly of hardy coastal trees like pine and cypress"
+    marsh: "coastal marshes, especially on the northern shores, with salt-tolerant vegetation"
+    plains: "broad, grassy plains with sandy soil, mostly open and windswept"
+
+- south_gondor:
+    mountains: "the southern slopes of the ephel dúath, rugged and rocky with sparse vegetation"
+    hills: "dry hills with patches of hardy grass and low shrubs, with occasional small trees in sheltered areas"
+    forest: "scattered, stunted woodlands in the northern areas, mainly near water sources, with drought-resistant trees"
+    marsh: "some marshy areas near the rivers, particularly close to the Anduin and the Harnen, with reeds and boggy ground"
+    plains: "broad, semi-arid plains with a mix of rocky soil and grasslands, dotted with thorny bushes and scrub"
+
+- pelennor:
+    mountains: ~
+    hills: "low, grassy hills on the outskirts of the fields, gentle and rolling"
+    forest: "small copses of trees, mainly near the Anduin, with willows and poplars"
+    marsh: "occasional marshy patches near the river, with reeds and boggy ground"
+    plains: "expansive, fertile plains surrounding Minas Tirith, used for agriculture and pastures"
+
+- emyn_muil:
+    mountains: "sharp, rocky outcrops and jagged cliffs, difficult to traverse and devoid of vegetation"
+    hills: "steep, rugged hills with rocky terrain and scattered boulders"
+    forest: ~
+    marsh: ~
+    plains: "narrow, rocky valleys between the hills, mostly barren with sparse, hardy grasses"
+
+- dead_marshes:
+    mountains: ~
+    hills: ~
+    forest: ~
+    marsh: "vast, treacherous wetlands filled with stagnant water, rotting vegetation, and eerie, ghostly lights"
+    plains: ~
+
+- the_brown_lands:
+    mountains: ~
+    hills: "low, dry hills with bare earth and little vegetation"
+    forest: ~
+    marsh: ~
+    plains: "wide, barren plains with dry, cracked soil and sparse, withered grass"
+
+- dol_guldur:
+    mountains: ~
+    hills: "dark, twisted hills covered in thorny bushes and tangled undergrowth"
+    forest: "gloomy, dense forest with twisted trees and a foreboding atmosphere"
+    marsh: ~
+    plains: "small clearings within the forest, shadowed and barren, with dark, sickly grass"
+
+- mirkwood:
+    mountains: ~
+    hills: "dark, forested hills with thick, twisted trees and tangled undergrowth"
+    forest: "dense, oppressive forest with towering trees, thick canopies, and little sunlight"
+    marsh: "murky, boggy areas within the forest, filled with stagnant water and rotting vegetation"
+    plains: "small, rare clearings within the forest, shadowy and covered in dark, mossy grass"
+
+- east_bight:
+    mountains: ~
+    hills: "low, rolling hills covered in dry grass and scattered trees"
+    forest: "the edge of Mirkwood encroaching slightly into the bight, with thinning trees"
+    marsh: ~
+    plains: "wide, open plains where the forest once stood, now covered in dry grass and wildflowers"
+
+- northern_mirkwood:
+    mountains: ~
+    hills: "gentle, forested hills with tall, ancient trees and more light than the southern regions"
+    forest: "a lighter, more welcoming part of Mirkwood with tall trees and a rich, green canopy"
+    marsh: ~
+    plains: "small, grassy clearings where the elves dwell, with sunlight filtering through the trees"
+
+- mirkwood_mountains:
+    mountains: "steep, rocky mountains on the eastern edge of Mirkwood, covered in dark, foreboding forests"
+    hills: "rugged, forested hills at the base of the mountains, with dense undergrowth"
+    forest: "the trees here are dark and twisted, growing up the lower slopes of the mountains"
+    marsh: ~
+    plains: ~
+
+- erebor:
+    mountains: "the Lonely Mountain itself, towering and rocky with steep cliffs and snow-capped peaks"
+    hills: "the lower slopes of Erebor, with rugged terrain and scattered boulders"
+    forest: ~
+    marsh: ~
+    plains: "flat lands around the base of the mountain, mostly barren with patches of hardy grass"
+
+- iron_hills:
+    mountains: "tall, barren hills rich in iron ore, with steep slopes and rocky outcrops"
+    hills: "rugged, iron-rich hills with sparse vegetation and scattered rocks"
+    forest: ~
+    marsh: ~
+    plains: "narrow, rocky valleys between the hills, with dry grass and occasional shrubs"
+
+- dale:
+    mountains: "the slopes of Erebor, looming over the city of Dale"
+    hills: "gentle, green hills surrounding the city, with fertile soil and abundant vegetation"
+    forest: "light, deciduous forests near the river, with tall trees and dappled sunlight"
+    marsh: "small, marshy areas along the riverbanks, with reeds and wet grass"
+    plains: "wide, fertile plains stretching out from the city, ideal for farming and agriculture"
+
+- dorwinion:
+    mountains: ~
+    hills: "gently rolling hills near the shores of the Sea of Rhûn, with fertile soil perfect for vineyards"
+    forest: "lush, temperate forests near the rivers, with tall trees and abundant wildlife"
+    marsh: "wetlands near the mouths of the Celduin and Carnen rivers, with rich, waterlogged soil"
+    plains: "fertile plains stretching towards the Sea of Rhûn, ideal for agriculture and vineyards"
+
+- dagor_land:
+    mountains: ~
+    hills: "low, barren hills scattered with debris from ancient battles, with sparse, dry grass"
+    forest: ~
+    marsh: "large, marshy areas with stagnant water and treacherous ground, remnants of the Dead Marshes"
+    plains: "vast, desolate plains with hard, cracked earth and little vegetation, scarred by past wars"
+
+- ash_mountains:
+    mountains: "tall, jagged peaks shrouded in ash and smoke, with blackened rocks and steep cliffs"
+    hills: "volcanic foothills covered in ash, with sparse vegetation and a desolate atmosphere"
+    forest: ~
+    marsh: ~
+    plains: ~
+
+- nurn:
+    mountains: "the southern foothills of the Ash Mountains, with rocky terrain and sparse, hardy vegetation"
+    hills: "gently rolling hills surrounding the inland sea of Núrnen, with dry but fertile soil"
+    forest: "small, scattered groves of hardy trees near the shores of the Sea of Núrnen"
+    marsh: "marshy areas along the banks of the Sea of Núrnen, with brackish water and thick reeds"
+    plains: "expansive, arid plains, used for farming by the slaves of Mordor, with dry but fertile soil"
+
+- mountains_of_shadow:
+    mountains: "tall, forbidding peaks forming the western and southern borders of Mordor, with sharp cliffs and treacherous terrain"
+    hills: "rocky, barren hills leading up to the mountains, with sparse, dry vegetation"
+    forest: ~
+    marsh: ~
+    plains: ~
+
+- minas_morgul:
+    mountains: "steep, shadowy mountains that enclose the Morgul Vale, with cliffs and dark, jagged peaks"
+    hills: "rocky, barren hills tainted by the dark magic of the Nazgûl, with twisted, stunted vegetation"
+    forest: "dark, twisted trees in the vale, corrupted by dark sorcery, with a foreboding and eerie atmosphere"
+    marsh: ~
+    plains: "flat, cursed plains within the valley, with sickly, pale grass and a pervasive sense of dread"
+
+- udun:
+    mountains: "towering mountains of ash and smoke surrounding the northernmost valley of Mordor"
+    hills: "rugged, volcanic hills with sharp rocks and treacherous terrain, scarred by ancient battles"
+    forest: ~
+    marsh: ~
+    plains: "barren, ashen plains littered with the remnants of war, with blackened earth and little to no vegetation"
+
+- morannon:
+    mountains: "the Ephel Dúath and Ered Lithui converge here, forming an imposing gateway with towering peaks and cliffs"
+    hills: "rugged, rocky hills leading up to the Black Gate, with sparse, dry grass and scattered boulders"
+    forest: ~
+    marsh: "small, swampy areas near the gate, with foul water and treacherous, muddy ground"
+    plains: "desolate, battle-scarred plains before the Black Gate, with hard, cracked earth and little vegetation"
+
+- khand:
+    mountains: "the southernmost reaches of the Mountains of Shadow, with rocky terrain and arid cliffs"
+    hills: "rolling, dry hills with sparse vegetation, leading into the open plains of Khand"
+    forest: "scattered, sparse woodlands in the more fertile areas, with hardy trees and shrubs"
+    marsh: ~
+    plains: "vast, arid plains, home to the nomadic Easterlings, with hardy grasses and dry, cracked earth"
+
+- near_harad:
+    mountains: "rugged, rocky mountains along the northern borders, with steep cliffs and arid terrain"
+    hills: "rolling, sandy hills with sparse vegetation, leading into the desert plains of Near Harad"
+    forest: "scattered oases and groves of date palms and other hardy trees, providing rare patches of green"
+    marsh: ~
+    plains: "vast, arid plains and deserts, with shifting sands and hardy, drought-resistant grasses"
+
+- rhun:
+    mountains: "the Orocarni (Red Mountains) in the far east, with tall, reddish peaks and treacherous passes"
+    hills: "rolling hills near the Sea of Rhûn, with fertile soil and scattered farms"
+    forest: "dense, temperate forests near the western shores, with tall trees and rich undergrowth"
+    marsh: "marshlands near the mouths of the Celduin and Carnen rivers, with reeds and waterlogged soil"
+    plains: "expansive steppes and grasslands stretching across the heart of Rhûn, ideal for nomadic tribes and horsemen"
