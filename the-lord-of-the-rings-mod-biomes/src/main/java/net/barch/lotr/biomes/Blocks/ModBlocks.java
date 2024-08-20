@@ -56,7 +56,7 @@ public class ModBlocks {
 
     public static final Block PLUM_PRESSURE_PLATE = registerBlock("plum_pressure_plate", new PressurePlateBlock(PLUM_SET_TYPE, CloneBlock(Blocks.OAK_PRESSURE_PLATE)));
 
-    public static final Block PLUM_LEAVES = registerBlock("plum_leaves", new FruitingLeavesBlock(CloneBlock(Blocks.OAK_LEAVES).nonOpaque().ticksRandomly()));
+    public static final Block PLUM_LEAVES = registerBlock("plum_leaves", new FruitingLeavesBlock(CloneBlock(Blocks.OAK_LEAVES).allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never).blockVision(Blocks::never).nonOpaque().ticksRandomly(), "plum"));
 
     public static final Block PLUM_SAPLING = registerBlock("plum_sapling", new SaplingBlock(ModMisc.PLUM_SAPLING_GENERATOR, CloneBlock(Blocks.OAK_SAPLING).noCollision().nonOpaque().ticksRandomly()));
 

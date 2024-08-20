@@ -75,7 +75,7 @@ def generate_item_models(woods_file, items_file, output_dir):
             content = block_template.format(model=model)
             write_model(os.path.join(output_dir, file_name), content)
     
-    print("Processing miscellaneous` items")
+    print("Processing miscellaneous: items")
     # Generate non wood flat items
     for flat_item in items['custom_flats']:
         texture = f"the-lord-of-the-rings-mod-biomes:item/{flat_item}"
