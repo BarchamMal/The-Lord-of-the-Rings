@@ -111,4 +111,4 @@ The ones listed here are only a few, and I'll have to read the Silmarilion, The 
 - Beechnut: A tree with leaves that have 3 growth stages, etc, yielding 8-16 beech nuts.
 - Olive: A tree with leaves that have 3 growth stages, etc, yielding 4-8 olives.
 - Cherry: Gotten from breaking cherry leaves.
-- Plum: A tree with leaves that have 3 growth stages, etc, yielding 3-6 plums.
+- [***DONE***] Plum: A tree with leaves that have 3 growth stages, etc, yielding 3-6 plums.

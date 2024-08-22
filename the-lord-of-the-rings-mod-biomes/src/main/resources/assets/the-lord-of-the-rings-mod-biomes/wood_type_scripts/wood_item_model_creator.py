@@ -15,7 +15,7 @@ def write_model(output_path, content):
         print(f"Creating model: {output_path}")
     with open(output_path, 'w') as file:
         file.write(content)
-
+    
 def generate_item_models(woods_file, items_file, output_dir):
     """Generate item models for wood types based on the provided YAML files."""
     # Load YAML files

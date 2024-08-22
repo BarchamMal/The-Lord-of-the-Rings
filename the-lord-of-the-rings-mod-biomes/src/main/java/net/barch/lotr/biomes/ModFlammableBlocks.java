@@ -22,6 +22,16 @@ public class ModFlammableBlocks {
         registerFlammable(PLUM_STAIRS, Blocks.OAK_STAIRS);
         registerFlammable(PLUM_PLANKS, Blocks.OAK_PLANKS);
 
+        registerFlammable(OLIVE_LOG, Blocks.OAK_LOG);
+        registerFlammable(OLIVE_LOG_STRIPPED, Blocks.STRIPPED_OAK_LOG);
+        registerFlammable(OLIVE_WOOD, Blocks.OAK_WOOD);
+        registerFlammable(OLIVE_WOOD_STRIPPED, Blocks.STRIPPED_OAK_WOOD);
+        registerFlammable(OLIVE_FENCE_GATE, Blocks.OAK_FENCE_GATE);
+        registerFlammable(OLIVE_FENCE, Blocks.OAK_FENCE);
+        registerFlammable(OLIVE_SLAB, Blocks.OAK_SLAB);
+        registerFlammable(OLIVE_STAIRS, Blocks.OAK_STAIRS);
+        registerFlammable(OLIVE_PLANKS, Blocks.OAK_PLANKS);
+
     }
 
     public static void registerFlammable(Block toRegister, Block toStealStatsFrom) {

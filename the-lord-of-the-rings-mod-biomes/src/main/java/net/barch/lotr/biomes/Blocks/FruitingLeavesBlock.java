@@ -4,9 +4,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Fertilizable;
 import net.minecraft.block.LeavesBlock;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.context.LootContextParameterSet;
@@ -34,8 +34,8 @@ import static net.barch.lotr.biomes.TheLordOfTheRingsModBiomes.TLOTRMB;
 public class FruitingLeavesBlock extends LeavesBlock implements Fertilizable {
 
     public static final IntProperty FRUIT;
-    public static final int MAX_AGE = 2; // AGE_2 only supports 0, 1, 2
-    public static Identifier lootTableId;
+    public static final int MAX_AGE = 2; 
+    public Identifier lootTableId;
 
     public FruitingLeavesBlock(Settings settings, String lootTableId) {
         super(settings);
@@ -53,7 +53,7 @@ public class FruitingLeavesBlock extends LeavesBlock implements Fertilizable {
         return true;
     }
     public boolean canGrow(BlockState state) {
-        return !(getAge(state) == getMaxAge());
+        return !(getAge(state) == getMaxAge()) && !state.get(PERSISTENT);
     }
 
     @Override
@@ -86,14 +86,17 @@ public class FruitingLeavesBlock extends LeavesBlock implements Fertilizable {
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
 
-        if (!(world instanceof ServerWorld) || !(getAge(state) == getMaxAge()) || player.getAbilities().creativeMode || player.isUsingItem()) {
-            return ActionResult.PASS;
+        boolean silh = player.getMainHandStack().getItem() instanceof BlockItem;
+        boolean sirh = player.getOffHandStack().getItem() instanceof BlockItem;
+
+        if (!(world instanceof ServerWorld) || !(getAge(state) == getMaxAge()) || (silh || sirh)) {
+            return super.onUse(state, world, pos, player, hit);
         }
         LootContextParameterSet.Builder builder = (new LootContextParameterSet.Builder((ServerWorld) world))
                 .add(LootContextParameters.THIS_ENTITY, player)
                 .add(LootContextParameters.ORIGIN, player.getPos());
 
-        RegistryKey<LootTable> lootTableKey = RegistryKey.of(RegistryKeys.LOOT_TABLE, lootTableId);
+        RegistryKey<LootTable> lootTableKey = RegistryKey.of(RegistryKeys.LOOT_TABLE, this.lootTableId);
         LootTable lootTable = world.getServer().getReloadableRegistries().getLootTable(lootTableKey);
 
         LootContextParameterSet lootContextParameterSet = builder.build(LootContextTypes.GIFT);

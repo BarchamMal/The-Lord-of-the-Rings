@@ -20,6 +20,7 @@ import static net.barch.lotr.biomes.TheLordOfTheRingsModBiomes.*;
 public class ModItems {
 
     public static final RegistryKey<TerraformBoatType> PLUM_BOAT_KEY = createKey(Identifier.of(TLOTRMB, "plum"));
+    public static final RegistryKey<TerraformBoatType> OLIVE_BOAT_KEY = createKey(Identifier.of(TLOTRMB, "olive"));
 
     public static final Item PLUM_LOG_BLOCK_ITEM = registerBlockItem(PLUM_LOG, "plum_log");
     public static final Item PLUM_LOG_STRIPPED_BLOCK_ITEM = registerBlockItem(PLUM_LOG_STRIPPED, "plum_log_stripped");
@@ -39,11 +40,31 @@ public class ModItems {
     public static final Item PLUM_LEAVES_ITEM = registerBlockItem(PLUM_LEAVES, "plum_leaves");
     public static final Item PLUM_SAPLING_ITEM = registerBlockItem(PLUM_SAPLING, "plum_sapling");
 
+    public static final Item OLIVE_LOG_BLOCK_ITEM = registerBlockItem(OLIVE_LOG, "olive_log");
+    public static final Item OLIVE_LOG_STRIPPED_BLOCK_ITEM = registerBlockItem(OLIVE_LOG_STRIPPED, "olive_log_stripped");
+    public static final Item OLIVE_WOOD_BLOCK_ITEM = registerBlockItem(OLIVE_WOOD, "olive_wood");
+    public static final Item OLIVE_WOOD_STRIPPED_BLOCK_ITEM = registerBlockItem(OLIVE_WOOD_STRIPPED, "olive_wood_stripped");
+    public static final Item OLIVE_FENCE_GATE_ITEM = registerBlockItem(OLIVE_FENCE_GATE, "olive_fence_gate");
+    public static final Item OLIVE_FENCE_ITEM = registerBlockItem(OLIVE_FENCE, "olive_fence");
+    public static final Item OLIVE_SLAB_ITEM = registerBlockItem(OLIVE_SLAB, "olive_slab");
+    public static final Item OLIVE_PLANKS_ITEM = registerBlockItem(OLIVE_PLANKS, "olive_planks");
+    public static final Item OLIVE_STAIRS_ITEM = registerBlockItem(OLIVE_STAIRS, "olive_stairs");
+    public static final Item OLIVE_BUTTON_ITEM = registerBlockItem(OLIVE_BUTTON, "olive_button");
+    public static final Item OLIVE_SIGN_ITEM = registerSignItem(OLIVE_SIGN, OLIVE_WALL_SIGN, "olive_sign");
+    public static final Item OLIVE_HANGING_SIGN_ITEM = registerSignItem(OLIVE_HANGING_SIGN, OLIVE_WALL_HANGING_SIGN, "olive_hanging_sign");
+    public static final Item OLIVE_TRAPDOOR_ITEM = registerBlockItem(OLIVE_TRAPDOOR, "olive_trapdoor");
+    public static final Item OLIVE_DOOR_ITEM = registerBlockItem(OLIVE_DOOR, "olive_door");
+    public static final Item OLIVE_PRESSURE_PLATE_ITEM = registerBlockItem(OLIVE_PRESSURE_PLATE, "olive_pressure_plate");
+    public static final Item OLIVE_LEAVES_ITEM = registerBlockItem(OLIVE_LEAVES, "olive_leaves");
+    public static final Item OLIVE_SAPLING_ITEM = registerBlockItem(OLIVE_SAPLING, "olive_sapling");
+
     public static final Item PLUM_ITEM = registerFoodItem(FoodComponents.APPLE, "plum");
+    public static final Item OLIVE_ITEM = registerFoodItem(FoodComponents.APPLE, "olive");
 
     public static final Item PLUM_BOAT_ITEM = registerBoatItem(PLUM_BOAT_KEY, false, "plum_boat");
     public static final Item PLUM_BOAT_CHEST_ITEM = registerBoatItem(PLUM_BOAT_KEY, true, "plum_boat_chest");
-
+    public static final Item OLIVE_BOAT_ITEM = registerBoatItem(OLIVE_BOAT_KEY, false, "olive_boat");
+    public static final Item OLIVE_BOAT_CHEST_ITEM = registerBoatItem(OLIVE_BOAT_KEY, true, "olive_boat_chest");
     public static Item registerBlockItem(Block block, String name) {
         return Registry.register(Registries.ITEM, Identifier.of(TLOTRMB, name), new BlockItem(block, new Item.Settings()));
     }
@@ -82,17 +103,38 @@ public class ModItems {
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(PLUM_PRESSURE_PLATE_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, PLUM_TRAPDOOR_ITEM)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(PLUM_BUTTON_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, PLUM_PRESSURE_PLATE_ITEM)});
 
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_LOG_BLOCK_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, PLUM_LOG_BLOCK_ITEM), new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, PLUM_BUTTON_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_WOOD_BLOCK_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, OLIVE_LOG_BLOCK_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_LOG_STRIPPED_BLOCK_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, OLIVE_WOOD_BLOCK_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_WOOD_STRIPPED_BLOCK_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, OLIVE_LOG_STRIPPED_BLOCK_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_PLANKS_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, OLIVE_WOOD_STRIPPED_BLOCK_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_STAIRS_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, OLIVE_PLANKS_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_SLAB_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, OLIVE_STAIRS_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_FENCE_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, OLIVE_SLAB_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_FENCE_GATE_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, OLIVE_FENCE_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_DOOR_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, OLIVE_FENCE_GATE_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_TRAPDOOR_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, OLIVE_DOOR_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_PRESSURE_PLATE_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, OLIVE_TRAPDOOR_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_BUTTON_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, OLIVE_PRESSURE_PLATE_ITEM)});
+
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(PLUM_SIGN_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FUNCTIONAL, Items.CHERRY_HANGING_SIGN)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(PLUM_HANGING_SIGN_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FUNCTIONAL, PLUM_SIGN_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_SIGN_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FUNCTIONAL, PLUM_HANGING_SIGN_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_HANGING_SIGN_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FUNCTIONAL, OLIVE_SIGN_ITEM)});
 
 
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(PLUM_BOAT_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, Items.CHERRY_CHEST_BOAT)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(PLUM_BOAT_CHEST_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, PLUM_BOAT_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_BOAT_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, PLUM_BOAT_CHEST_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_BOAT_CHEST_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, OLIVE_BOAT_ITEM)});
 
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(PLUM_LEAVES_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, Items.CHERRY_LEAVES)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(PLUM_SAPLING_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, Items.CHERRY_SAPLING)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_LEAVES_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, PLUM_LEAVES_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_SAPLING_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, OLIVE_SAPLING_ITEM)});
 
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(PLUM_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, Items.APPLE)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, PLUM_ITEM)});
 
         LOGGER.info("The Lord of The Rings Mod: Biomes mod items initialized.");
     }

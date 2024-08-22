@@ -3,10 +3,10 @@
 
 
     "item.the-lord-of-the-rings-mod-biomes.plum": "Plum",
-    "block.the-lord-of-the-rings-mod-biomes.plum_sapling": "Plum Sapling",
-    "block.the-lord-of-the-rings-mod-biomes.plum_leaves": "Plum Leaves",
     "item.the-lord-of-the-rings-mod-biomes.plum_boat_chest": "Plum Boat with Chest",
     "item.the-lord-of-the-rings-mod-biomes.plum_boat": "Plum Boat",
+    "block.the-lord-of-the-rings-mod-biomes.plum_sapling": "Plum Sapling",
+    "block.the-lord-of-the-rings-mod-biomes.plum_leaves": "Plum Leaves",
     "block.the-lord-of-the-rings-mod-biomes.plum_hanging_sign": "Plum Hanging Sign",
     "block.the-lord-of-the-rings-mod-biomes.plum_sign": "Plum Sign",
     "block.the-lord-of-the-rings-mod-biomes.plum_button": "Plum Button",
@@ -21,5 +21,26 @@
     "block.the-lord-of-the-rings-mod-biomes.plum_wood_stripped": "Stripped Plum Wood",
     "block.the-lord-of-the-rings-mod-biomes.plum_log_stripped": "Stripped Plum Log",
     "block.the-lord-of-the-rings-mod-biomes.plum_wood": "Plum Wood",
-    "block.the-lord-of-the-rings-mod-biomes.plum_log": "Plum Logs"
+    "block.the-lord-of-the-rings-mod-biomes.plum_log": "Plum Logs",
+
+    "item.the-lord-of-the-rings-mod-biomes.olive": "Olive",
+    "item.the-lord-of-the-rings-mod-biomes.olive_boat_chest": "Olive Boat with Chest",
+    "item.the-lord-of-the-rings-mod-biomes.olive_boat": "Olive Boat",
+    "block.the-lord-of-the-rings-mod-biomes.olive_sapling": "Olive Sapling",
+    "block.the-lord-of-the-rings-mod-biomes.olive_leaves": "Olive Leaves",
+    "block.the-lord-of-the-rings-mod-biomes.olive_hanging_sign": "Olive Hanging Sign",
+    "block.the-lord-of-the-rings-mod-biomes.olive_sign": "Olive Sign",
+    "block.the-lord-of-the-rings-mod-biomes.olive_button": "Olive Button",
+    "block.the-lord-of-the-rings-mod-biomes.olive_pressure_plate": "Olive Pressure Plate",
+    "block.the-lord-of-the-rings-mod-biomes.olive_trapdoor": "Olive Trapdoor",
+    "block.the-lord-of-the-rings-mod-biomes.olive_door": "Olive Door",
+    "block.the-lord-of-the-rings-mod-biomes.olive_fence_gate": "Olive Fence Gate",
+    "block.the-lord-of-the-rings-mod-biomes.olive_fence": "Olive Fence",
+    "block.the-lord-of-the-rings-mod-biomes.olive_slab": "Olive Slab",
+    "block.the-lord-of-the-rings-mod-biomes.olive_stairs": "Olive Stairs",
+    "block.the-lord-of-the-rings-mod-biomes.olive_planks": "Olive Planks",
+    "block.the-lord-of-the-rings-mod-biomes.olive_wood_stripped": "Stripped Olive Wood",
+    "block.the-lord-of-the-rings-mod-biomes.olive_log_stripped": "Stripped Olive Log",
+    "block.the-lord-of-the-rings-mod-biomes.olive_wood": "Olive Wood",
+    "block.the-lord-of-the-rings-mod-biomes.olive_log": "Olive Logs"
 }
