@@ -17,11 +17,11 @@ The ones listed here are only a few, and I'll have to read the Silmarilion, The 
 - Salt Ore
 
 ## Flowers/Plants
-- Elanor
-- Niphredil
+- [***DONE***] Elanor
+- [***DONE***] Niphredil
 - Simbelmynë
-- Athelas
-- Violets
+- [***DONE***] Athelas
+- [***DONE***] Violets
 - Honeysuckle
 - Narcissus
 - Celandine
@@ -109,6 +109,6 @@ The ones listed here are only a few, and I'll have to read the Silmarilion, The 
 - Hazelnut: A jungle bush feature with leaves that have 3 growth stages, normal, flowering, fruiting, can be bonemealed and harvested by right-clicking, yielding 8-16 hazelnuts.
 - Chestnut: A tree with leaves that have 3 growth stages, can be bonemealed etc, yielding 4-8 chestnuts.
 - Beechnut: A tree with leaves that have 3 growth stages, etc, yielding 8-16 beech nuts.
-- Olive: A tree with leaves that have 3 growth stages, etc, yielding 4-8 olives.
+- [***DONE***] Olive: A tree with leaves that have 3 growth stages, etc, yielding 4-8 olives.
 - Cherry: Gotten from breaking cherry leaves.
 - [***DONE***] Plum: A tree with leaves that have 3 growth stages, etc, yielding 3-6 plums.

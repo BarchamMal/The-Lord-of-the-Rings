@@ -1,0 +1,6 @@
+blockstate_creator:
+  delete: false
+wood_model_creator:
+  delete: false
+wood_item_model_creator:
+  delete: false

@@ -3,6 +3,7 @@ package net.barch.lotr.biomes;
 import com.terraformersmc.terraform.boat.api.TerraformBoatType;
 import com.terraformersmc.terraform.boat.impl.item.TerraformBoatItem;
 import net.barch.barch_lib.Items.ItemGroupItem;
+import net.barch.lotr.biomes.Blocks.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.component.type.FoodComponent;
@@ -21,6 +22,11 @@ public class ModItems {
 
     public static final RegistryKey<TerraformBoatType> PLUM_BOAT_KEY = createKey(Identifier.of(TLOTRMB, "plum"));
     public static final RegistryKey<TerraformBoatType> OLIVE_BOAT_KEY = createKey(Identifier.of(TLOTRMB, "olive"));
+
+    public static final Item ATHELAS_ITEM = registerBlockItem(ATHELAS, "athelas");
+    public static final Item ELANOR_ITEM = registerBlockItem(ELANOR, "elanor");
+    public static final Item NIPHREDIL_ITEM = registerBlockItem(NIPHREDIL, "niphredil");
+    public static final Item VIOLETS_ITEM = registerBlockItem(VIOLETS, "violets");
 
     public static final Item PLUM_LOG_BLOCK_ITEM = registerBlockItem(PLUM_LOG, "plum_log");
     public static final Item PLUM_LOG_STRIPPED_BLOCK_ITEM = registerBlockItem(PLUM_LOG_STRIPPED, "plum_log_stripped");
@@ -60,6 +66,7 @@ public class ModItems {
 
     public static final Item PLUM_ITEM = registerFoodItem(FoodComponents.APPLE, "plum");
     public static final Item OLIVE_ITEM = registerFoodItem(FoodComponents.APPLE, "olive");
+    public static final Item BLACKBERRY_ITEM = registerItem(new AliasedBlockItem(BLACKBERRY_BUSH_BLOCK, new Item.Settings().food(FoodComponents.SWEET_BERRIES)), "blackberry");
 
     public static final Item PLUM_BOAT_ITEM = registerBoatItem(PLUM_BOAT_KEY, false, "plum_boat");
     public static final Item PLUM_BOAT_CHEST_ITEM = registerBoatItem(PLUM_BOAT_KEY, true, "plum_boat_chest");
@@ -84,6 +91,10 @@ public class ModItems {
 
     public static Item registerFoodItem(FoodComponent foodComponent, String name) {
         return Registry.register(Registries.ITEM, Identifier.of(TLOTRMB, name), new Item(new Item.Settings().food(foodComponent)));
+    }
+
+    public static Item registerItem(Item item, String name) {
+        return Registry.register(Registries.ITEM, Identifier.of(TLOTRMB, name), item);
     }
 
     public static void onInitialize() {
@@ -135,6 +146,13 @@ public class ModItems {
 
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(PLUM_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, Items.APPLE)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, PLUM_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(BLACKBERRY_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, OLIVE_ITEM)});
+
+
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(ATHELAS_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, Items.LILY_OF_THE_VALLEY)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(ELANOR_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, ATHELAS_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(NIPHREDIL_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, ELANOR_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(VIOLETS_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, NIPHREDIL_ITEM)});
 
         LOGGER.info("The Lord of The Rings Mod: Biomes mod items initialized.");
     }

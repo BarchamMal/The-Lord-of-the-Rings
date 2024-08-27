@@ -1,8 +1,6 @@
 {
     "itemGroup.the-lord-of-the-rings-mod-biomes.biomes_group": "LoTR: Biomes",
 
-
-    "item.the-lord-of-the-rings-mod-biomes.plum": "Plum",
     "item.the-lord-of-the-rings-mod-biomes.plum_boat_chest": "Plum Boat with Chest",
     "item.the-lord-of-the-rings-mod-biomes.plum_boat": "Plum Boat",
     "block.the-lord-of-the-rings-mod-biomes.plum_sapling": "Plum Sapling",
@@ -23,7 +21,6 @@
     "block.the-lord-of-the-rings-mod-biomes.plum_wood": "Plum Wood",
     "block.the-lord-of-the-rings-mod-biomes.plum_log": "Plum Logs",
 
-    "item.the-lord-of-the-rings-mod-biomes.olive": "Olive",
     "item.the-lord-of-the-rings-mod-biomes.olive_boat_chest": "Olive Boat with Chest",
     "item.the-lord-of-the-rings-mod-biomes.olive_boat": "Olive Boat",
     "block.the-lord-of-the-rings-mod-biomes.olive_sapling": "Olive Sapling",
@@ -42,5 +39,14 @@
     "block.the-lord-of-the-rings-mod-biomes.olive_wood_stripped": "Stripped Olive Wood",
     "block.the-lord-of-the-rings-mod-biomes.olive_log_stripped": "Stripped Olive Log",
     "block.the-lord-of-the-rings-mod-biomes.olive_wood": "Olive Wood",
-    "block.the-lord-of-the-rings-mod-biomes.olive_log": "Olive Logs"
+    "block.the-lord-of-the-rings-mod-biomes.olive_log": "Olive Logs",
+
+    "item.the-lord-of-the-rings-mod-biomes.plum": "Plum",
+    "item.the-lord-of-the-rings-mod-biomes.olive": "Olive",
+    "item.the-lord-of-the-rings-mod-biomes.blackberry": "Blackberry",
+
+    "block.the-lord-of-the-rings-mod-biomes.elanor": "Elanor",
+    "block.the-lord-of-the-rings-mod-biomes.niphredil": "Niphredil",
+    "block.the-lord-of-the-rings-mod-biomes.violets": "Violets",
+    "block.the-lord-of-the-rings-mod-biomes.athelas": "Athelas"
 }

@@ -34,7 +34,7 @@ import static net.barch.lotr.biomes.TheLordOfTheRingsModBiomes.TLOTRMB;
 public class FruitingLeavesBlock extends LeavesBlock implements Fertilizable {
 
     public static final IntProperty FRUIT;
-    public static final int MAX_AGE = 2; 
+    public static final int MAX_AGE = 2;
     public Identifier lootTableId;
 
     public FruitingLeavesBlock(Settings settings, String lootTableId) {

@@ -7,16 +7,20 @@ def load_yaml(file_path):
     with open(file_path, 'r') as file:
         return yaml.safe_load(file)
 
-def write_model(output_path, content):
-    """Write content to a file and log the action."""
-    if os.path.exists(output_path):
+def write_model(output_path, content, config):
+    """Write content to a file and log the action.""" 
+    if config['delete']:
+        print(f"Deleting model: {output_path}")
+        os.remove(output_path)
+        return
+    elif os.path.exists(output_path):
         print(f"Replacing model: {output_path}")
     else:
         print(f"Creating model: {output_path}")
     with open(output_path, 'w') as file:
         file.write(content)
     
-def generate_item_models(woods_file, items_file, output_dir):
+def generate_item_models(woods_file, items_file, output_dir, config):
     """Generate item models for wood types based on the provided YAML files."""
     # Load YAML files
     with open(woods_file, 'r') as file:
@@ -24,6 +28,9 @@ def generate_item_models(woods_file, items_file, output_dir):
 
     with open(items_file, 'r') as file:
         items = yaml.safe_load(file)
+    
+    with open(config, 'r') as file:
+        config = yaml.safe_load(file)['wood_item_model_creator']
 
     # Create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
@@ -59,7 +66,7 @@ def generate_item_models(woods_file, items_file, output_dir):
             texture = custom_texture.format(wood_type=wood_type) if custom_texture else f"the-lord-of-the-rings-mod-biomes:item/{wood_type}_{item_name}"
             file_name = f"{wood_type}_{item_name}.json"
             content = flat_template.format(texture=texture)
-            write_model(os.path.join(output_dir, file_name), content)
+            write_model(os.path.join(output_dir, file_name), content, config)
 
         # Generate block items
         for block_item in items['blocks']:
@@ -73,21 +80,30 @@ def generate_item_models(woods_file, items_file, output_dir):
             model = custom_model.format(wood_type=wood_type) if custom_model else f"the-lord-of-the-rings-mod-biomes:block/{wood_type}_{item_name}"
             file_name = f"{wood_type}_{item_name}.json"
             content = block_template.format(model=model)
-            write_model(os.path.join(output_dir, file_name), content)
+            write_model(os.path.join(output_dir, file_name), content, config)
     
     print("Processing miscellaneous: items")
+
     # Generate non wood flat items
     for flat_item in items['custom_flats']:
-        texture = f"the-lord-of-the-rings-mod-biomes:item/{flat_item}"
-        file_name = f"{flat_item}.json"
-        content = flat_template.format(texture=texture)
-        write_model(os.path.join(output_dir, file_name), content)
+            if isinstance(flat_item, dict):
+                item_name = list(flat_item.keys())[0]
+                custom_texture = flat_item[item_name].get('texture', None)
+            else:
+                item_name = flat_item
+                custom_texture = None
+
+            texture = custom_texture if custom_texture else f"the-lord-of-the-rings-mod-biomes:item/{item_name}"
+            file_name = f"{item_name}.json"
+            content = flat_template.format(texture=texture)
+            write_model(os.path.join(output_dir, file_name), content, config)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate item models for wood types.")
     parser.add_argument('woods_file', type=str, help='Path to the woods.yaml file.')
     parser.add_argument('items_file', type=str, help='Path to the items.yaml file.')
     parser.add_argument('output_dir', type=str, help='Directory where models will be output.')
+    parser.add_argument('config', type=str, help='Config file for this script\'s non-command line argument settings.')
 
     args = parser.parse_args()
-    generate_item_models(args.woods_file, args.items_file, args.output_dir)
+    generate_item_models(args.woods_file, args.items_file, args.output_dir, args.config)

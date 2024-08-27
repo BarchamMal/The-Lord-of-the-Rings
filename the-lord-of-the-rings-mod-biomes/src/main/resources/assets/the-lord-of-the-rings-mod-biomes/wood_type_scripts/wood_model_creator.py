@@ -2,8 +2,12 @@ import argparse
 import os
 import yaml
 
-def create_model(template_path, output_path, wood_type, fruiting):
-    if os.path.exists(output_path):
+def create_model(template_path, output_path, wood_type, fruiting, config):
+    if config['delete']:
+        print(f"Deleting model: {output_path}")
+        os.remove(output_path)
+        return
+    elif os.path.exists(output_path):
         print(f"Replacing model: {output_path}")
     else:
         print(f"Creating model: {output_path}")
@@ -19,9 +23,12 @@ def create_model(template_path, output_path, wood_type, fruiting):
     with open(output_path, 'w') as output_file:
         output_file.write(template_content)
 
-def process_woods(yaml_file, output_dir, template_dir):
+def process_woods(yaml_file, output_dir, template_dir, config):
     with open(yaml_file, 'r') as file:
         woods = yaml.safe_load(file)['woods']
+    
+    with open(config, 'r') as file:
+        config = yaml.safe_load(file)['wood_model_creator']
     
     model_types = [
         "stairs", "stairs_inner", "stairs_outer",
@@ -53,25 +60,26 @@ def process_woods(yaml_file, output_dir, template_dir):
             for model_type in model_types:
                 template_path = os.path.join(template_dir, f"{model_type}.json")
                 output_path = os.path.join(output_dir, f"{wood_type}_{model_type}.json")
-                create_model(template_path, output_path, wood_type, fruiting)
+                create_model(template_path, output_path, wood_type, fruiting, config)
 
             # Generate leaves based on fruiting state
             if fruiting:
                 for model_type in fruiting_leaf_types:
                     template_path = os.path.join(template_dir, f"{model_type}.json")
                     output_path = os.path.join(output_dir, f"{wood_type}_{model_type}.json")
-                    create_model(template_path, output_path, wood_type, fruiting)
+                    create_model(template_path, output_path, wood_type, fruiting, config)
             else:
                 template_path = os.path.join(template_dir, f"{non_fruiting_leaf_type}.json")
                 output_path = os.path.join(output_dir, f"{wood_type}_{non_fruiting_leaf_type}.json")
-                create_model(template_path, output_path, wood_type, fruiting)
+                create_model(template_path, output_path, wood_type, fruiting, config)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate wood models.")
     parser.add_argument('yaml_file', type=str, help='Path to the YAML file.')
     parser.add_argument('output_dir', type=str, help='Directory where models will be output.')
     parser.add_argument('template_dir', type=str, help='Directory containing model templates.')
+    parser.add_argument('config', type=str, help='Config file for this script\'s non-command line argument settings.')
     
     args = parser.parse_args()
     
-    process_woods(args.yaml_file, args.output_dir, args.template_dir)
+    process_woods(args.yaml_file, args.output_dir, args.template_dir, args.config)

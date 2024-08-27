@@ -28,3 +28,12 @@ blocks:
 custom_flats:
   - plum
   - olive
+  - blackberry
+  - athelas:
+      texture: "the-lord-of-the-rings-mod-biomes:block/athelas"
+  - elanor:
+      texture: "the-lord-of-the-rings-mod-biomes:block/elanor"
+  - niphredil:
+      texture: "the-lord-of-the-rings-mod-biomes:block/niphredil"
+  - violets:
+      texture: "the-lord-of-the-rings-mod-biomes:block/violets"
