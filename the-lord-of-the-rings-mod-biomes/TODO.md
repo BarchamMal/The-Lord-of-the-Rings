@@ -40,7 +40,7 @@ The ones listed here are only a few, and I'll have to read the Silmarilion, The 
 - Rowan
 - Holly
 - Willow
-- Fir
+- [***DONE***] Fir
 - Pine
 - Cedar
 - Yew
@@ -63,7 +63,7 @@ The ones listed here are only a few, and I'll have to read the Silmarilion, The 
 - Turnip
 - Barley
 - Strawberry
-- Blackberry
+- [***DONE***] Blackberry
 - Pear
 - Grape
 - Lettuce
@@ -80,9 +80,10 @@ The ones listed here are only a few, and I'll have to read the Silmarilion, The 
 - Hazelnut
 - Chestnut
 - Beechnut
-- Olive
+- [***DONE***] Olive
 - Cherry
-- Plum
+- [***DONE***] Plum
+- Apple
 
 # A more in-depth look
 
@@ -108,7 +109,8 @@ The ones listed here are only a few, and I'll have to read the Silmarilion, The 
 - Thyme: A short plant grown from thyme seeds and yielding 3-5 thyme bunches.
 - Hazelnut: A jungle bush feature with leaves that have 3 growth stages, normal, flowering, fruiting, can be bonemealed and harvested by right-clicking, yielding 8-16 hazelnuts.
 - Chestnut: A tree with leaves that have 3 growth stages, can be bonemealed etc, yielding 4-8 chestnuts.
-- Beechnut: A tree with leaves that have 3 growth stages, etc, yielding 8-16 beech nuts.
-- [***DONE***] Olive: A tree with leaves that have 3 growth stages, etc, yielding 4-8 olives.
+- Beechnut: A tree with leaves that have 3 growth stages, etc, yielding 8-16 beech nuts. 
+- Olive: A tree with leaves that have 3 growth stages, etc, yielding 4-8 olives.
 - Cherry: Gotten from breaking cherry leaves.
-- [***DONE***] Plum: A tree with leaves that have 3 growth stages, etc, yielding 3-6 plums.
+- Plum: A tree with leaves that have 3 growth stages, etc, yielding 3-6 plums.
+- Apple: A tree with leaves that have 3 growth stages, etc, yielding 2-4 apples.
