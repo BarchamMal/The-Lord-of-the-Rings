@@ -81,7 +81,7 @@ The ones listed here are only a few, and I'll have to read the Silmarilion, The 
 - Chestnut
 - Beechnut
 - [***DONE***] Olive
-- Cherry
+- [***DONE***] Cherry
 - [***DONE***] Plum
 - Apple
 
@@ -108,9 +108,9 @@ The ones listed here are only a few, and I'll have to read the Silmarilion, The 
 - Marjoram: A short plant grown from marjoram seeds and yielding 2-3 marjoram bunches.
 - Thyme: A short plant grown from thyme seeds and yielding 3-5 thyme bunches.
 - Hazelnut: A jungle bush feature with leaves that have 3 growth stages, normal, flowering, fruiting, can be bonemealed and harvested by right-clicking, yielding 8-16 hazelnuts.
-- Chestnut: A tree with leaves that have 3 growth stages, can be bonemealed etc, yielding 4-8 chestnuts.
-- Beechnut: A tree with leaves that have 3 growth stages, etc, yielding 8-16 beech nuts. 
-- Olive: A tree with leaves that have 3 growth stages, etc, yielding 4-8 olives.
-- Cherry: Gotten from breaking cherry leaves.
-- Plum: A tree with leaves that have 3 growth stages, etc, yielding 3-6 plums.
-- Apple: A tree with leaves that have 3 growth stages, etc, yielding 2-4 apples.
+- Chestnut: A tree with leaves that have 3 growth stages, can be bonemealed etc., yielding 4-8 chestnuts.
+- Beechnut: A tree with leaves that have 3 growth stages, etc., yielding 8-16 beech nuts. 
+- Olive: A tree with leaves that have 3 growth stages, etc., yielding 4-8 olives.
+- Cherry: Minecraft tree with leaves that have 3 growth stages etc., yielding 3-9 cherries
+- Plum: A tree with leaves that have 3 growth stages, etc., yielding 3-6 plums.
+- Apple: A tree with leaves that have 3 growth stages, etc., yielding 2-4 apples.

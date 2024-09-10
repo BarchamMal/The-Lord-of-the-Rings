@@ -20,6 +20,24 @@ import static net.barch.lotr.biomes.TheLordOfTheRingsModBiomes.LOGGER;
 
 public class ModBlocks {
 
+    // ----------------------------------------------------------
+    //  OOO  V   V  EEEEE  RRRR   RRRR   III  DDDD   EEEEE  SSSS
+    // O   O V   V  E      R   R  R   R   I   D   D  E      S
+    // O   O V   V  EEEE   RRRR   RRRR    I   D   D  EEEE    SSS
+    // O   O  V V   E      R  R   R  R    I   D   D  E          S
+    //  OOO    V    EEEEE  R   R  R   R  III  DDDD   EEEEE  SSSS
+    // ----------------------------------------------------------
+
+    public static final Block CHERRY_LEAVES = registerVanillaBlock("cherry_leaves", new ModdedCherryLeavesBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_LEAVES), "cherry"));
+
+    // ----------------------------------------------------------
+    //  OOO  V   V  EEEEE  RRRR   RRRR   III  DDDD   EEEEE  SSSS
+    // O   O V   V  E      R   R  R   R   I   D   D  E      S
+    // O   O V   V  EEEE   RRRR   RRRR    I   D   D  EEEE    SSS
+    // O   O  V V   E      R  R   R  R    I   D   D  E          S
+    //  OOO    V    EEEEE  R   R  R   R  III  DDDD   EEEEE  SSSS
+    // ----------------------------------------------------------
+
 
     public static final Block ATHELAS = registerBlock("athelas", new ShortPlantBlock(AbstractBlock.Settings.copy(Blocks.POPPY)));
     public static final Block ELANOR = registerBlock("elanor", new ShortPlantBlock(AbstractBlock.Settings.copy(Blocks.POPPY)));
@@ -99,6 +117,10 @@ public class ModBlocks {
 
     public static Block registerBlock(String name, Block block) {
         return Registry.register(Registries.BLOCK, Identifier.of(TLOTRMB, name), block);
+    }
+
+    public static Block registerVanillaBlock(String name, Block block) {
+        return Registry.register(Registries.BLOCK, name, block);
     }
 
     public static void onInitialize() {

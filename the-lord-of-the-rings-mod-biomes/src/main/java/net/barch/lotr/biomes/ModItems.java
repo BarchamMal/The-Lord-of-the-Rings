@@ -3,9 +3,8 @@ package net.barch.lotr.biomes;
 import com.terraformersmc.terraform.boat.api.TerraformBoatType;
 import com.terraformersmc.terraform.boat.impl.item.TerraformBoatItem;
 import net.barch.barch_lib.Items.ItemGroupItem;
-import net.barch.lotr.biomes.Blocks.ModBlocks;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.component.type.FoodComponents;
 import net.minecraft.item.*;
@@ -20,6 +19,23 @@ import static net.barch.lotr.biomes.TheLordOfTheRingsModBiomes.*;
 
 public class ModItems {
 
+    // ----------------------------------------------------------
+    //  OOO  V   V  EEEEE  RRRR   RRRR   III  DDDD   EEEEE  SSSS
+    // O   O V   V  E      R   R  R   R   I   D   D  E      S
+    // O   O V   V  EEEE   RRRR   RRRR    I   D   D  EEEE    SSS
+    // O   O  V V   E      R  R   R  R    I   D   D  E          S
+    //  OOO    V    EEEEE  R   R  R   R  III  DDDD   EEEEE  SSSS
+    // ----------------------------------------------------------
+
+    public static final Item CHERRY_LEAVES_ITEM = registerVanillaItem(new BlockItem(CHERRY_LEAVES, new Item.Settings()), "cherry_leaves");
+
+    // ----------------------------------------------------------
+    //  OOO  V   V  EEEEE  RRRR   RRRR   III  DDDD   EEEEE  SSSS
+    // O   O V   V  E      R   R  R   R   I   D   D  E      S
+    // O   O V   V  EEEE   RRRR   RRRR    I   D   D  EEEE    SSS
+    // O   O  V V   E      R  R   R  R    I   D   D  E          S
+    //  OOO    V    EEEEE  R   R  R   R  III  DDDD   EEEEE  SSSS
+    // ----------------------------------------------------------
     public static final RegistryKey<TerraformBoatType> PLUM_BOAT_KEY = createKey(Identifier.of(TLOTRMB, "plum"));
     public static final RegistryKey<TerraformBoatType> OLIVE_BOAT_KEY = createKey(Identifier.of(TLOTRMB, "olive"));
     public static final RegistryKey<TerraformBoatType> FIR_BOAT_KEY = createKey(Identifier.of(TLOTRMB, "fir"));
@@ -86,6 +102,7 @@ public class ModItems {
     public static final Item PLUM_ITEM = registerFoodItem(FoodComponents.APPLE, "plum");
     public static final Item OLIVE_ITEM = registerFoodItem(FoodComponents.APPLE, "olive");
     public static final Item BLACKBERRY_ITEM = registerItem(new AliasedBlockItem(BLACKBERRY_BUSH_BLOCK, new Item.Settings().food(FoodComponents.SWEET_BERRIES)), "blackberry");
+    public static final Item CHERRY_ITEM = registerFoodItem(FoodComponents.SWEET_BERRIES, "cherry");
 
     public static final Item PLUM_BOAT_ITEM = registerBoatItem(PLUM_BOAT_KEY, false, "plum_boat");
     public static final Item PLUM_BOAT_CHEST_ITEM = registerBoatItem(PLUM_BOAT_KEY, true, "plum_boat_chest");
@@ -93,6 +110,7 @@ public class ModItems {
     public static final Item OLIVE_BOAT_CHEST_ITEM = registerBoatItem(OLIVE_BOAT_KEY, true, "olive_boat_chest");
     public static final Item FIR_BOAT_ITEM = registerBoatItem(FIR_BOAT_KEY, false, "fir_boat");
     public static final Item FIR_BOAT_CHEST_ITEM = registerBoatItem(FIR_BOAT_KEY, true, "fir_boat_chest");
+
     public static Item registerBlockItem(Block block, String name) {
         return Registry.register(Registries.ITEM, Identifier.of(TLOTRMB, name), new BlockItem(block, new Item.Settings()));
     }
@@ -100,8 +118,7 @@ public class ModItems {
     public static Item registerSignItem(Block stangingBlock, Block wallBlock, String name) {
         if (name.contains("hang")) {
             return Registry.register(Registries.ITEM, Identifier.of(TLOTRMB, name), new SignItem(new Item.Settings(), stangingBlock, wallBlock));
-        }
-        else {
+        } else {
             return Registry.register(Registries.ITEM, Identifier.of(TLOTRMB, name), new HangingSignItem(stangingBlock, wallBlock, new Item.Settings()));
         }
     }
@@ -116,6 +133,10 @@ public class ModItems {
 
     public static Item registerItem(Item item, String name) {
         return Registry.register(Registries.ITEM, Identifier.of(TLOTRMB, name), item);
+    }
+
+    public static Item registerVanillaItem(Item item, String name) {
+        return Registry.register(Registries.ITEM, name, item);
     }
 
     public static void onInitialize() {
@@ -187,7 +208,8 @@ public class ModItems {
 
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(PLUM_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, Items.APPLE)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, PLUM_ITEM)});
-        LOTR_BIOMES_ITEM_GROUPER.GroupItem(BLACKBERRY_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, OLIVE_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(BLACKBERRY_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, Items.SWEET_BERRIES)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(CHERRY_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, BLACKBERRY_ITEM)});
 
 
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(ATHELAS_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, Items.LILY_OF_THE_VALLEY)});

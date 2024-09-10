@@ -1,0 +1,6 @@
+{
+  "parent": "the-lord-of-the-rings-mod-biomes:block/leaves",
+  "textures": {
+    "all": "the-lord-of-the-rings-mod-biomes:block/cherry_leaves"
+  }
+}
