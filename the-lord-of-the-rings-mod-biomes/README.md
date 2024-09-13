@@ -11,7 +11,7 @@ Currently, I've added:
 ## About contributing
 
 I use GIMP ([GNU Image Manipulation Program](gimp.org)) and [Blockbench](blockbench.net) (Well actually, I haven't used blockbench in this project yet, all the models were made with code) to create the models and textures.
-If you have gimp, you will notice I have some files saved in gimp's format `.xcf` if they end with `_leaves.xcf` or `_log.xcf` they are the files containing the data for leaves and logs which can be **easily modified at any time**.
+If you have gimp, you will notice I have some files saved in gimp's format `.xcf` if there are xcf files, they're probably for complex textures which are best stored in gimp's format than only in png form.
 The textures that will need created per tree are as follows:
  - <wood_name>_door_bottom
  - <wood_name>_door_top
