@@ -5,7 +5,8 @@ import yaml
 def create_blockstate(template_path, output_path, wood_type, config):
     if config['delete']:
         print(f"Deleting blockstate: {output_path}")
-        os.remove(output_path)
+        try: os.remove(output_path)
+        except: pass
         return
     elif os.path.exists(output_path):
         print(f"Replacing blockstate: {output_path}")

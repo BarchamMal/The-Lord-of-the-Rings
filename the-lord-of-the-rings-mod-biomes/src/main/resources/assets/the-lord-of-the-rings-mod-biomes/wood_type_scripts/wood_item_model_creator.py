@@ -11,7 +11,8 @@ def write_model(output_path, content, config):
     """Write content to a file and log the action.""" 
     if config['delete']:
         print(f"Deleting model: {output_path}")
-        os.remove(output_path)
+        try: os.remove(output_path)
+        except: pass
         return
     elif os.path.exists(output_path):
         print(f"Replacing model: {output_path}")

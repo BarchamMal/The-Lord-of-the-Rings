@@ -44,6 +44,7 @@ public class ModItems {
     public static final Item ELANOR_ITEM = registerBlockItem(ELANOR, "elanor");
     public static final Item NIPHREDIL_ITEM = registerBlockItem(NIPHREDIL, "niphredil");
     public static final Item VIOLETS_ITEM = registerBlockItem(VIOLETS, "violets");
+    public static final Item PIPE_WEED_ITEM = registerBlockItem(PIPE_WEED, "pipe_weed");
 
     public static final Item PLUM_LOG_BLOCK_ITEM = registerBlockItem(PLUM_LOG, "plum_log");
     public static final Item PLUM_LOG_STRIPPED_BLOCK_ITEM = registerBlockItem(PLUM_LOG_STRIPPED, "plum_log_stripped");
@@ -216,6 +217,7 @@ public class ModItems {
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(ELANOR_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, ATHELAS_ITEM)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(NIPHREDIL_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, ELANOR_ITEM)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(VIOLETS_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, NIPHREDIL_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(PIPE_WEED_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, VIOLETS_ITEM)});
 
         LOGGER.info("The Lord of The Rings Mod: Biomes mod items initialized.");
     }

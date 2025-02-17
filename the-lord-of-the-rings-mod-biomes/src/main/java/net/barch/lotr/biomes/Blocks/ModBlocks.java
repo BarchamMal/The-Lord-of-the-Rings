@@ -43,6 +43,7 @@ public class ModBlocks {
     public static final Block ELANOR = registerBlock("elanor", new ShortPlantBlock(AbstractBlock.Settings.copy(Blocks.POPPY)));
     public static final Block NIPHREDIL = registerBlock("niphredil", new ShortPlantBlock(AbstractBlock.Settings.copy(Blocks.POPPY)));
     public static final Block VIOLETS = registerBlock("violets", new ShortPlantBlock(AbstractBlock.Settings.copy(Blocks.POPPY)));
+    public static final Block PIPE_WEED = registerBlock("pipe_weed", new ShortPlantBlock(AbstractBlock.Settings.copy(Blocks.POPPY)));
     public static final Block BLACKBERRY_BUSH_BLOCK = registerBlock("blackberry_bush", new BushBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH), "blackberry", 1));
 
     public static final Block PLUM_LOG = registerLogBlock(MapColor.DARK_DULL_PINK, MapColor.DARK_CRIMSON, "plum_log");

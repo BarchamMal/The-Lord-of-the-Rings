@@ -5,7 +5,8 @@ import yaml
 def create_model(template_path, output_path, wood_type, fruiting, config):
     if config['delete']:
         print(f"Deleting model: {output_path}")
-        os.remove(output_path)
+        try: os.remove(output_path)
+        except: pass
         return
     elif os.path.exists(output_path):
         print(f"Replacing model: {output_path}")
