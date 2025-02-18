@@ -17,9 +17,11 @@ public class TheLordOfTheRingsModBiomesClient implements ClientModInitializer {
 				ModBlocks.OLIVE_DOOR, ModBlocks.OLIVE_TRAPDOOR, ModBlocks.OLIVE_SAPLING,
 				ModBlocks.FIR_DOOR, ModBlocks.FIR_TRAPDOOR, ModBlocks.FIR_SAPLING,
 				ModBlocks.ATHELAS, ModBlocks.ELANOR, ModBlocks.VIOLETS, ModBlocks.NIPHREDIL,
-				ModBlocks.BLACKBERRY_BUSH_BLOCK, ModBlocks.PIPE_WEED);
+				ModBlocks.BLACKBERRY_BUSH_BLOCK, ModBlocks.PIPE_WEED, ModBlocks.APPLE_SAPLING,
+				ModBlocks.APPLE_DOOR, ModBlocks.APPLE_TRAPDOOR);
 		TerraformBoatClientHelper.registerModelLayers(Identifier.of(TLOTRMB, "plum"), false);
 		TerraformBoatClientHelper.registerModelLayers(Identifier.of(TLOTRMB, "olive"), false);
 		TerraformBoatClientHelper.registerModelLayers(Identifier.of(TLOTRMB, "fir"), false);
+		TerraformBoatClientHelper.registerModelLayers(Identifier.of(TLOTRMB, "apple"), false);
 	}
 }

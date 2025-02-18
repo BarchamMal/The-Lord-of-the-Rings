@@ -61,6 +61,26 @@
     "block.the-lord-of-the-rings-mod-biomes.fir_wood": "Fir Wood",
     "block.the-lord-of-the-rings-mod-biomes.fir_log": "Fir Logs",
 
+    "item.the-lord-of-the-rings-mod-biomes.apple_boat_chest": "Apple Boat with Chest",
+    "item.the-lord-of-the-rings-mod-biomes.apple_boat": "Apple Boat",
+    "block.the-lord-of-the-rings-mod-biomes.apple_sapling": "Apple Sapling",
+    "block.the-lord-of-the-rings-mod-biomes.apple_leaves": "Apple Leaves",
+    "block.the-lord-of-the-rings-mod-biomes.apple_hanging_sign": "Apple Hanging Sign",
+    "block.the-lord-of-the-rings-mod-biomes.apple_sign": "Apple Sign",
+    "block.the-lord-of-the-rings-mod-biomes.apple_button": "Apple Button",
+    "block.the-lord-of-the-rings-mod-biomes.apple_pressure_plate": "Apple Pressure Plate",
+    "block.the-lord-of-the-rings-mod-biomes.apple_trapdoor": "Apple Trapdoor",
+    "block.the-lord-of-the-rings-mod-biomes.apple_door": "Apple Door",
+    "block.the-lord-of-the-rings-mod-biomes.apple_fence_gate": "Apple Fence Gate",
+    "block.the-lord-of-the-rings-mod-biomes.apple_fence": "Apple Fence",
+    "block.the-lord-of-the-rings-mod-biomes.apple_slab": "Apple Slab",
+    "block.the-lord-of-the-rings-mod-biomes.apple_stairs": "Apple Stairs",
+    "block.the-lord-of-the-rings-mod-biomes.apple_planks": "Apple Planks",
+    "block.the-lord-of-the-rings-mod-biomes.apple_wood_stripped": "Stripped Apple Wood",
+    "block.the-lord-of-the-rings-mod-biomes.apple_log_stripped": "Stripped Apple Log",
+    "block.the-lord-of-the-rings-mod-biomes.apple_wood": "Apple Wood",
+    "block.the-lord-of-the-rings-mod-biomes.apple_log": "Apple Logs",
+
     "item.the-lord-of-the-rings-mod-biomes.plum": "Plum",
     "item.the-lord-of-the-rings-mod-biomes.olive": "Olive",
     "item.the-lord-of-the-rings-mod-biomes.blackberry": "Blackberry",
@@ -69,5 +89,6 @@
     "block.the-lord-of-the-rings-mod-biomes.elanor": "Elanor",
     "block.the-lord-of-the-rings-mod-biomes.niphredil": "Niphredil",
     "block.the-lord-of-the-rings-mod-biomes.violets": "Violets",
+    "block.the-lord-of-the-rings-mod-biomes.pipe_weed": "Pipe Weed",
     "block.the-lord-of-the-rings-mod-biomes.athelas": "Athelas"
 }

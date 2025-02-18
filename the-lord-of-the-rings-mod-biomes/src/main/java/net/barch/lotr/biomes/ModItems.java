@@ -100,6 +100,25 @@ public class ModItems {
     public static final Item FIR_LEAVES_ITEM = registerBlockItem(FIR_LEAVES, "fir_leaves");
     public static final Item FIR_SAPLING_ITEM = registerBlockItem(FIR_SAPLING, "fir_sapling");
 
+
+    public static final Item APPLE_LOG_BLOCK_ITEM = registerBlockItem(APPLE_LOG, "apple_log");
+    public static final Item APPLE_LOG_STRIPPED_BLOCK_ITEM = registerBlockItem(APPLE_LOG_STRIPPED, "apple_log_stripped");
+    public static final Item APPLE_WOOD_BLOCK_ITEM = registerBlockItem(APPLE_WOOD, "apple_wood");
+    public static final Item APPLE_WOOD_STRIPPED_BLOCK_ITEM = registerBlockItem(APPLE_WOOD_STRIPPED, "apple_wood_stripped");
+    public static final Item APPLE_FENCE_GATE_ITEM = registerBlockItem(APPLE_FENCE_GATE, "apple_fence_gate");
+    public static final Item APPLE_FENCE_ITEM = registerBlockItem(APPLE_FENCE, "apple_fence");
+    public static final Item APPLE_SLAB_ITEM = registerBlockItem(APPLE_SLAB, "apple_slab");
+    public static final Item APPLE_PLANKS_ITEM = registerBlockItem(APPLE_PLANKS, "apple_planks");
+    public static final Item APPLE_STAIRS_ITEM = registerBlockItem(APPLE_STAIRS, "apple_stairs");
+    public static final Item APPLE_BUTTON_ITEM = registerBlockItem(APPLE_BUTTON, "apple_button");
+    public static final Item APPLE_SIGN_ITEM = registerSignItem(APPLE_SIGN, APPLE_WALL_SIGN, "apple_sign");
+    public static final Item APPLE_HANGING_SIGN_ITEM = registerSignItem(APPLE_HANGING_SIGN, APPLE_WALL_HANGING_SIGN, "apple_hanging_sign");
+    public static final Item APPLE_TRAPDOOR_ITEM = registerBlockItem(APPLE_TRAPDOOR, "apple_trapdoor");
+    public static final Item APPLE_DOOR_ITEM = registerBlockItem(APPLE_DOOR, "apple_door");
+    public static final Item APPLE_PRESSURE_PLATE_ITEM = registerBlockItem(APPLE_PRESSURE_PLATE, "apple_pressure_plate");
+    public static final Item APPLE_LEAVES_ITEM = registerBlockItem(APPLE_LEAVES, "apple_leaves");
+    public static final Item APPLE_SAPLING_ITEM = registerBlockItem(APPLE_SAPLING, "apple_sapling");
+
     public static final Item PLUM_ITEM = registerFoodItem(FoodComponents.APPLE, "plum");
     public static final Item OLIVE_ITEM = registerFoodItem(FoodComponents.APPLE, "olive");
     public static final Item BLACKBERRY_ITEM = registerItem(new AliasedBlockItem(BLACKBERRY_BUSH_BLOCK, new Item.Settings().food(FoodComponents.SWEET_BERRIES)), "blackberry");
@@ -107,6 +126,8 @@ public class ModItems {
 
     public static final Item PLUM_BOAT_ITEM = registerBoatItem(PLUM_BOAT_KEY, false, "plum_boat");
     public static final Item PLUM_BOAT_CHEST_ITEM = registerBoatItem(PLUM_BOAT_KEY, true, "plum_boat_chest");
+    public static final Item APPLE_BOAT_ITEM = registerBoatItem(PLUM_BOAT_KEY, false, "apple_boat");
+    public static final Item APPLE_BOAT_CHEST_ITEM = registerBoatItem(PLUM_BOAT_KEY, true, "apple_boat_chest");
     public static final Item OLIVE_BOAT_ITEM = registerBoatItem(OLIVE_BOAT_KEY, false, "olive_boat");
     public static final Item OLIVE_BOAT_CHEST_ITEM = registerBoatItem(OLIVE_BOAT_KEY, true, "olive_boat_chest");
     public static final Item FIR_BOAT_ITEM = registerBoatItem(FIR_BOAT_KEY, false, "fir_boat");
@@ -143,7 +164,6 @@ public class ModItems {
     public static void onInitialize() {
 
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(PLUM_LOG_BLOCK_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, Items.CHERRY_LOG), new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, Items.CHERRY_BUTTON)});
-
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(PLUM_WOOD_BLOCK_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, PLUM_LOG_BLOCK_ITEM)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(PLUM_LOG_STRIPPED_BLOCK_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, PLUM_WOOD_BLOCK_ITEM)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(PLUM_WOOD_STRIPPED_BLOCK_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, PLUM_LOG_STRIPPED_BLOCK_ITEM)});
@@ -185,12 +205,28 @@ public class ModItems {
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(FIR_PRESSURE_PLATE_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, FIR_TRAPDOOR_ITEM)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(FIR_BUTTON_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, FIR_PRESSURE_PLATE_ITEM)});
 
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(APPLE_LOG_BLOCK_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, FIR_LOG_BLOCK_ITEM), new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, FIR_BUTTON_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(APPLE_WOOD_BLOCK_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, APPLE_LOG_BLOCK_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(APPLE_LOG_STRIPPED_BLOCK_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, APPLE_WOOD_BLOCK_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(APPLE_WOOD_STRIPPED_BLOCK_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, APPLE_LOG_STRIPPED_BLOCK_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(APPLE_PLANKS_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, APPLE_WOOD_STRIPPED_BLOCK_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(APPLE_STAIRS_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, APPLE_PLANKS_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(APPLE_SLAB_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, APPLE_STAIRS_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(APPLE_FENCE_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, APPLE_SLAB_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(APPLE_FENCE_GATE_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, APPLE_FENCE_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(APPLE_DOOR_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, APPLE_FENCE_GATE_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(APPLE_TRAPDOOR_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, APPLE_DOOR_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(APPLE_PRESSURE_PLATE_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, APPLE_TRAPDOOR_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(APPLE_BUTTON_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, APPLE_PRESSURE_PLATE_ITEM)});
+
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(PLUM_SIGN_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FUNCTIONAL, Items.CHERRY_HANGING_SIGN)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(PLUM_HANGING_SIGN_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FUNCTIONAL, PLUM_SIGN_ITEM)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_SIGN_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FUNCTIONAL, PLUM_HANGING_SIGN_ITEM)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_HANGING_SIGN_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FUNCTIONAL, OLIVE_SIGN_ITEM)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(FIR_SIGN_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FUNCTIONAL, OLIVE_HANGING_SIGN_ITEM)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(FIR_HANGING_SIGN_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FUNCTIONAL, FIR_SIGN_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(APPLE_SIGN_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FUNCTIONAL, FIR_HANGING_SIGN_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(APPLE_HANGING_SIGN_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FUNCTIONAL, APPLE_SIGN_ITEM)});
 
 
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(PLUM_BOAT_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, Items.CHERRY_CHEST_BOAT)});
@@ -199,6 +235,8 @@ public class ModItems {
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_BOAT_CHEST_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, OLIVE_BOAT_ITEM)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(FIR_BOAT_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, OLIVE_BOAT_CHEST_ITEM)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(FIR_BOAT_CHEST_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, FIR_BOAT_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(APPLE_BOAT_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, FIR_BOAT_CHEST_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(APPLE_BOAT_CHEST_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, APPLE_BOAT_ITEM)});
 
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(PLUM_LEAVES_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, Items.CHERRY_LEAVES)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(PLUM_SAPLING_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, Items.CHERRY_SAPLING)});
@@ -206,6 +244,8 @@ public class ModItems {
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_SAPLING_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, OLIVE_SAPLING_ITEM)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(FIR_LEAVES_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, OLIVE_LEAVES_ITEM)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(FIR_SAPLING_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, FIR_SAPLING_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(APPLE_LEAVES_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, FIR_LEAVES_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(APPLE_SAPLING_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, APPLE_SAPLING_ITEM)});
 
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(PLUM_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, Items.APPLE)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, PLUM_ITEM)});
