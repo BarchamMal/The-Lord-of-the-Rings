@@ -14,6 +14,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 
 import static net.barch.lotr.biomes.ModItems.BLACKBERRY_ITEM;
+import static net.barch.lotr.biomes.ModItems.STRAWBERRY_ITEM;
 import static net.barch.lotr.biomes.ModMisc.*;
 import static net.barch.lotr.biomes.TheLordOfTheRingsModBiomes.TLOTRMB;
 import static net.barch.lotr.biomes.TheLordOfTheRingsModBiomes.LOGGER;
@@ -44,7 +45,8 @@ public class ModBlocks {
     public static final Block NIPHREDIL = registerBlock("niphredil", new ShortPlantBlock(AbstractBlock.Settings.copy(Blocks.POPPY)));
     public static final Block VIOLETS = registerBlock("violets", new ShortPlantBlock(AbstractBlock.Settings.copy(Blocks.POPPY)));
     public static final Block PIPE_WEED = registerBlock("pipe_weed", new ShortPlantBlock(AbstractBlock.Settings.copy(Blocks.POPPY)));
-    public static final Block BLACKBERRY_BUSH_BLOCK = registerBlock("blackberry_bush", new BushBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH), "blackberry", 1));
+    public static final Block BLACKBERRY_BUSH_BLOCK = registerBlock("blackberry_bush", new BushBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH), "blackberry", 1, true));
+    public static final Block STRAWBERRY_BUSH_BLOCK = registerBlock("strawberry_bush", new BushBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH), "strawberry", 1, false));
 
 
     public static final Block PLUM_LOG = registerLogBlock(MapColor.DARK_DULL_PINK, MapColor.DARK_CRIMSON, "plum_log");
@@ -150,6 +152,7 @@ public class ModBlocks {
     public static void onInitialize() {
 
         ((BushBlock)BLACKBERRY_BUSH_BLOCK).setPickStack(BLACKBERRY_ITEM);
+        ((BushBlock)STRAWBERRY_BUSH_BLOCK).setPickStack(STRAWBERRY_ITEM);
 
         LOGGER.info("The Lord of The Rings Mod: Biomes mod blocks initialized.");
     }

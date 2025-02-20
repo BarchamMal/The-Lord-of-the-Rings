@@ -3,7 +3,10 @@ package net.barch.lotr.biomes.Blocks;
 import net.barch.lotr.biomes.TheLordOfTheRingsModBiomes;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SweetBerryBushBlock;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -20,6 +23,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.event.GameEvent;
@@ -32,17 +36,33 @@ public class BushBlock extends SweetBerryBushBlock {
 
     String lootTableId;
     int resetAge;
+    boolean thorny;
     Item pickStack;
 
-    public BushBlock(Settings settings, String lootTableId, int resetAge) {
+    public BushBlock(Settings settings, String lootTableId, int resetAge, boolean thorny) {
         super(settings);
         this.lootTableId = lootTableId;
         this.resetAge = resetAge;
+        this.thorny = thorny;
     }
 
     @Override
     public ItemStack getPickStack(WorldView world, BlockPos pos, BlockState state) {
         return this.pickStack.getDefaultStack();
+    }
+
+    protected void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+        if (entity instanceof LivingEntity && entity.getType() != EntityType.FOX && entity.getType() != EntityType.BEE) {
+            entity.slowMovement(state, new Vec3d(0.800000011920929, 0.75, 0.800000011920929));
+            if (!world.isClient && (Integer)state.get(AGE) > 0 && (entity.lastRenderX != entity.getX() || entity.lastRenderZ != entity.getZ())) {
+                double d = Math.abs(entity.getX() - entity.lastRenderX);
+                double e = Math.abs(entity.getZ() - entity.lastRenderZ);
+                if ((d >= 0.003000000026077032 || e >= 0.003000000026077032) && this.thorny) {
+                    entity.damage(world.getDamageSources().sweetBerryBush(), 1.0F);
+                }
+            }
+
+        }
     }
 
     public void setPickStack(Item pickStack) {

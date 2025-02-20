@@ -30,6 +30,7 @@ custom_flats:
   - olive
   - blackberry
   - cherry
+  - strawberry
   - athelas:
       texture: "the-lord-of-the-rings-mod-biomes:block/athelas"
   - elanor:

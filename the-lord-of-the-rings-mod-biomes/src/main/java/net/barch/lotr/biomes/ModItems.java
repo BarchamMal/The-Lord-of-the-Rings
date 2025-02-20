@@ -123,6 +123,7 @@ public class ModItems {
     public static final Item OLIVE_ITEM = registerFoodItem(FoodComponents.APPLE, "olive");
     public static final Item BLACKBERRY_ITEM = registerItem(new AliasedBlockItem(BLACKBERRY_BUSH_BLOCK, new Item.Settings().food(FoodComponents.SWEET_BERRIES)), "blackberry");
     public static final Item CHERRY_ITEM = registerFoodItem(FoodComponents.SWEET_BERRIES, "cherry");
+    public static final Item STRAWBERRY_ITEM = registerItem(new AliasedBlockItem(STRAWBERRY_BUSH_BLOCK, new Item.Settings().food(FoodComponents.SWEET_BERRIES)), "strawberry");
 
     public static final Item PLUM_BOAT_ITEM = registerBoatItem(PLUM_BOAT_KEY, false, "plum_boat");
     public static final Item PLUM_BOAT_CHEST_ITEM = registerBoatItem(PLUM_BOAT_KEY, true, "plum_boat_chest");
@@ -251,6 +252,7 @@ public class ModItems {
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(OLIVE_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, PLUM_ITEM)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(BLACKBERRY_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, Items.SWEET_BERRIES)});
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(CHERRY_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, BLACKBERRY_ITEM)});
+        LOTR_BIOMES_ITEM_GROUPER.GroupItem(STRAWBERRY_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, CHERRY_ITEM)});
 
 
         LOTR_BIOMES_ITEM_GROUPER.GroupItem(ATHELAS_ITEM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, Items.LILY_OF_THE_VALLEY)});
