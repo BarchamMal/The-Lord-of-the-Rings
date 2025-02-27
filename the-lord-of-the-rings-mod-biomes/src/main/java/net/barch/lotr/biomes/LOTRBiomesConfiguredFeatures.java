@@ -24,6 +24,8 @@ public class LOTRBiomesConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> FIR_MEGA_TREE = ofConfiguredFeature("fir_tree_mega");
     public static final RegistryKey<ConfiguredFeature<?, ?>> APPLE_TREE = ofConfiguredFeature("apple_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> APPLE_BEE_TREE = ofConfiguredFeature("apple_tree_bee");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PINE_TREE = ofConfiguredFeature("pine_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PINE_MEGA_TREE = ofConfiguredFeature("pine_tree_mega");
 
     public static RegistryKey<ConfiguredFeature<?, ?>> ofConfiguredFeature(String id) {
         return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(TLOTRMB, id));

@@ -18,6 +18,7 @@ public class ModBoatTypes {
     public static final TerraformBoatType OLIVE_BOAT_TYPE = registerBoatType(OLIVE_BOAT_ITEM, OLIVE_BOAT_CHEST_ITEM, OLIVE_PLANKS, "olive");
     public static final TerraformBoatType FIR_BOAT_TYPE = registerBoatType(FIR_BOAT_ITEM, FIR_BOAT_CHEST_ITEM, FIR_PLANKS, "fir");
     public static final TerraformBoatType APPLE_BOAT_TYPE = registerBoatType(APPLE_BOAT_ITEM, APPLE_BOAT_CHEST_ITEM, APPLE_PLANKS, "apple");
+    public static final TerraformBoatType PINE_BOAT_TYPE = registerBoatType(PINE_BOAT_ITEM, PINE_BOAT_CHEST_ITEM, PINE_PLANKS, "pine");
 
 
     public static TerraformBoatType registerBoatType(Item boatItem, Item chestBoatItem, Block planks, String name) {
