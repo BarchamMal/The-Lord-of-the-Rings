@@ -1,0 +1,6 @@
+woods:
+  - plum: fruiting
+  - olive: fruiting
+  - fir: non-fruiting
+  - apple: fruiting
+  - pine: non-fruiting-var

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "the-lord-of-the-rings-mod-biomes:block/{wood_type}_log_top",
+    "side": "the-lord-of-the-rings-mod-biomes:block/{wood_type}_log_side"
+  }
+}

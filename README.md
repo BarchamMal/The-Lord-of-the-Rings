@@ -13,7 +13,7 @@
 
  But, as the old was, so the new follows... Neither of The Lord of the Rings Mods are Open Sourced. This is a pity, but it did not stop Mevans from making the best there has been of The Lord of the Rings in minecraft. But now that mevans is not working on it, I believe it should be open sourced.
  Therefore, as I do not foresee any mod being made which could rival The Lord of the Rings Mod: Legacy. Yet the more tries there are, the higher the chance of success; I shall make an attempt, in fabric, open sourced, in the newest versions of minecraft I can.
- I do not expect, I hardly dare hope, that these mods will come to greatness, yet I will work on them wether or not they do.
+ I do not expect, I hardly dare hope, that these mods will come to greatness, yet I will work on them whether or not they do.
 
  Mods? Plural? Yes. To keep it clean and crisp, and also because there are many things of The Lord of the Rings Mod: Legacy, which would be used elsewhere, but the whole mod would not be wanted, I shall make multiple mods, resource packs, and data packs. The Lord of the Rings Mod: BarchamMal's Edition will be a modpack, not a mod.
 

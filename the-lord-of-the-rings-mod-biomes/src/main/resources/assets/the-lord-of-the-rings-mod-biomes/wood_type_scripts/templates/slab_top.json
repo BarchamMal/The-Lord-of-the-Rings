@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "the-lord-of-the-rings-mod-biomes:block/{wood_type}_planks",
+    "top": "the-lord-of-the-rings-mod-biomes:block/{wood_type}_planks",
+    "side": "the-lord-of-the-rings-mod-biomes:block/{wood_type}_planks"
+  }
+}

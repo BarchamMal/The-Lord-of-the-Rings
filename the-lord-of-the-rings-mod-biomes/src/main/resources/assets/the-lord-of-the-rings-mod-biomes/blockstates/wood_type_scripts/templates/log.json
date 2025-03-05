@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "the-lord-of-the-rings-mod-biomes:block/{wood_type}_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "the-lord-of-the-rings-mod-biomes:block/{wood_type}_log"
+    },
+    "axis=z": {
+      "model": "the-lord-of-the-rings-mod-biomes:block/{wood_type}_log_horizontal",
+      "x": 90
+    }
+  }
+}

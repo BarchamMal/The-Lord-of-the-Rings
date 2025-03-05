@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "the-lord-of-the-rings-mod-biomes:olive_log_stripped"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "the-lord-of-the-rings-mod-biomes:blocks/olive_log_stripped"
+}

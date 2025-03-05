@@ -1,0 +1,6 @@
+{
+  "parent": "the-lord-of-the-rings-mod-biomes:block/leaves",
+  "textures": {
+    "all": "the-lord-of-the-rings-mod-biomes:block/{wood_type}_leaves_flowering"
+  }
+}
