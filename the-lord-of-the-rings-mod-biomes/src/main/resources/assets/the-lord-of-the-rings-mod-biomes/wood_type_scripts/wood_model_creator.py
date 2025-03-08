@@ -5,7 +5,8 @@ import yaml
 def create_model(template_path, output_path, wood_type, fruiting, config):
     if config['delete']:
         print(f"Deleting model: {output_path}")
-        os.remove(output_path)
+        try: os.remove(output_path)
+        except: pass
         return
     elif os.path.exists(output_path):
         print(f"Replacing model: {output_path}")
@@ -23,13 +24,15 @@ def create_model(template_path, output_path, wood_type, fruiting, config):
     with open(output_path, 'w') as output_file:
         output_file.write(template_content)
 
-def process_woods(yaml_file, output_dir, template_dir, config):
+def process_woods(yaml_file, output_dir, template_dir, config_path):
     with open(yaml_file, 'r') as file:
         woods = yaml.safe_load(file)['woods']
     
-    with open(config, 'r') as file:
+    with open(config_path, 'r') as file:
         config = yaml.safe_load(file)['wood_model_creator']
     
+    tree_types = config.get('tree_types', {})
+
     model_types = [
         "stairs", "stairs_inner", "stairs_outer",
         "slab_top", "slab",
@@ -45,33 +48,27 @@ def process_woods(yaml_file, output_dir, template_dir, config):
         "wood", "wood_stripped",
         "planks"
     ]
-    
-    fruiting_leaf_types = ["leaves_stage_0", "leaves_stage_1", "leaves_stage_2"]
-    non_fruiting_leaf_type = "leaves_stage_0"
-    
+
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
     for wood in woods:
-        for wood_type, fruiting in wood.items():
+        for wood_type, tree_type in wood.items():
             if not os.path.exists(output_dir):
                 os.makedirs(output_dir)
             
             for model_type in model_types:
                 template_path = os.path.join(template_dir, f"{model_type}.json")
                 output_path = os.path.join(output_dir, f"{wood_type}_{model_type}.json")
-                create_model(template_path, output_path, wood_type, fruiting, config)
+                create_model(template_path, output_path, wood_type, tree_type, config)
 
-            # Generate leaves based on fruiting state
-            if fruiting:
-                for model_type in fruiting_leaf_types:
-                    template_path = os.path.join(template_dir, f"{model_type}.json")
-                    output_path = os.path.join(output_dir, f"{wood_type}_{model_type}.json")
-                    create_model(template_path, output_path, wood_type, fruiting, config)
-            else:
-                template_path = os.path.join(template_dir, f"{non_fruiting_leaf_type}.json")
-                output_path = os.path.join(output_dir, f"{wood_type}_{non_fruiting_leaf_type}.json")
-                create_model(template_path, output_path, wood_type, fruiting, config)
+            # Generate leaves based on tree type from config
+            leaf_models = tree_types.get(tree_type, [])
+            for model_type in leaf_models:
+                template_path = os.path.join(template_dir, f"{model_type}.json")
+                output_path = os.path.join(output_dir, f"{wood_type}_{model_type}.json")
+                create_model(template_path, output_path, wood_type, tree_type, config)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate wood models.")

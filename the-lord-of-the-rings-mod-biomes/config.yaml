@@ -1,6 +1,50 @@
-blockstate_creator:
-  delete: false
-wood_model_creator:
-  delete: false
 wood_item_model_creator:
-  delete: false
+  delete: true
+blockstate_creator:
+  delete: true
+  _comment:
+    - these are the different block states per model groups. if new
+    - ones are added, matching files in blockstates/wood_type_scripts/templates
+    - must also be added.
+  name:
+    fruiting: fruiting_leaves
+    non_fruiting: leaves
+    fruiting-single-var: fruiting_leaves_single_var
+    fruiting-double-var: fruiting_leaves_double_var
+    fruiting-full-var: fruiting_leaves_full_var
+    non-fruiting-var: leaves_var
+  delete: true
+wood_model_creator:
+  delete: true
+  _comment:
+    - these in the tree_types list are for the model creator to know what to create.
+    - if new ones are added, matching files in the-lord-of-the-rings-mod-biomes/wood_type_scripts/templates
+    - must be added
+  tree_types:
+    fruiting:
+      - leaves_stage_0
+      - leaves_stage_1
+      - leaves_stage_2
+    non-fruiting:
+      - leaves_stage_0
+    fruiting-single-var:
+      - leaves_stage_0
+      - leaves_stage_1
+      - leaves_stage_2
+      - leaves_stage_2v1
+    fruiting-double-var:
+      - leaves_stage_0
+      - leaves_stage_1
+      - leaves_stage_1v1
+      - leaves_stage_2
+      - leaves_stage_2v1
+    fruiting-full-var:
+      - leaves_stage_0
+      - leaves_stage_0v1
+      - leaves_stage_1
+      - leaves_stage_1v1
+      - leaves_stage_2
+      - leaves_stage_2v1
+    non-fruiting-var:
+      - leaves_stage_0
+      - leaves_stage_0v1

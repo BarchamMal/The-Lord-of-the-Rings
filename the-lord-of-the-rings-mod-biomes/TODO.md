@@ -26,7 +26,7 @@ The ones listed here are only a few, and I'll have to read the Silmarilion, The 
 - Narcissus
 - Celandine
 - Lily
-- Pipe Weed
+- [***IN-PROGRESS***]Pipe Weed
 - Rushes
 - Samphire
 - Bracken
@@ -44,12 +44,12 @@ The ones listed here are only a few, and I'll have to read the Silmarilion, The 
 - Pine
 - Cedar
 - Yew
-- Apple
+- [***DONE***]Apple
 - Aldar
 - Aspen
 - Juniper
 - Eglantine
-- Olive
+- [***DONE***] Olive
 - Bay
 - Cypress
 - Elm

@@ -30,6 +30,7 @@ custom_flats:
   - olive
   - blackberry
   - cherry
+  - strawberry
   - athelas:
       texture: "the-lord-of-the-rings-mod-biomes:block/athelas"
   - elanor:
@@ -38,3 +39,5 @@ custom_flats:
       texture: "the-lord-of-the-rings-mod-biomes:block/niphredil"
   - violets:
       texture: "the-lord-of-the-rings-mod-biomes:block/violets"
+  - pipe_weed:
+      texture: "the-lord-of-the-rings-mod-biomes:block/pipe_weed"

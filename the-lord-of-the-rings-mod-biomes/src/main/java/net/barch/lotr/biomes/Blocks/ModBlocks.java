@@ -14,6 +14,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 
 import static net.barch.lotr.biomes.ModItems.BLACKBERRY_ITEM;
+import static net.barch.lotr.biomes.ModItems.STRAWBERRY_ITEM;
 import static net.barch.lotr.biomes.ModMisc.*;
 import static net.barch.lotr.biomes.TheLordOfTheRingsModBiomes.TLOTRMB;
 import static net.barch.lotr.biomes.TheLordOfTheRingsModBiomes.LOGGER;
@@ -43,7 +44,10 @@ public class ModBlocks {
     public static final Block ELANOR = registerBlock("elanor", new ShortPlantBlock(AbstractBlock.Settings.copy(Blocks.POPPY)));
     public static final Block NIPHREDIL = registerBlock("niphredil", new ShortPlantBlock(AbstractBlock.Settings.copy(Blocks.POPPY)));
     public static final Block VIOLETS = registerBlock("violets", new ShortPlantBlock(AbstractBlock.Settings.copy(Blocks.POPPY)));
-    public static final Block BLACKBERRY_BUSH_BLOCK = registerBlock("blackberry_bush", new BushBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH), "blackberry", 1));
+    public static final Block PIPE_WEED = registerBlock("pipe_weed", new ShortPlantBlock(AbstractBlock.Settings.copy(Blocks.POPPY)));
+    public static final Block BLACKBERRY_BUSH_BLOCK = registerBlock("blackberry_bush", new BushBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH), "blackberry", 1, true));
+    public static final Block STRAWBERRY_BUSH_BLOCK = registerBlock("strawberry_bush", new BushBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH), "strawberry", 1, false));
+
 
     public static final Block PLUM_LOG = registerLogBlock(MapColor.DARK_DULL_PINK, MapColor.DARK_CRIMSON, "plum_log");
     public static final Block PLUM_LOG_STRIPPED = registerLogBlock(MapColor.DARK_DULL_PINK, MapColor.DARK_CRIMSON, "plum_log_stripped");
@@ -108,6 +112,49 @@ public class ModBlocks {
     public static final Block FIR_SAPLING = registerBlock("fir_sapling", new SaplingBlock(ModMisc.FIR_SAPLING_GENERATOR, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING).noCollision().nonOpaque().ticksRandomly()));
 
 
+    public static final Block APPLE_LOG = registerLogBlock(MapColor.DARK_DULL_PINK, MapColor.DARK_CRIMSON, "apple_log");
+    public static final Block APPLE_LOG_STRIPPED = registerLogBlock(MapColor.DARK_DULL_PINK, MapColor.DARK_CRIMSON, "apple_log_stripped");
+    public static final Block APPLE_WOOD = registerLogBlock(MapColor.DARK_DULL_PINK, MapColor.DARK_CRIMSON, "apple_wood");
+    public static final Block APPLE_WOOD_STRIPPED = registerLogBlock(MapColor.DARK_DULL_PINK, MapColor.DARK_CRIMSON, "apple_wood_stripped");
+    public static final Block APPLE_FENCE_GATE = registerBlock("apple_fence_gate", new FenceGateBlock(APPLE, AbstractBlock.Settings.copy(Blocks.OAK_FENCE_GATE)));
+    public static final Block APPLE_FENCE = registerBlock("apple_fence", new FenceBlock(AbstractBlock.Settings.copy(Blocks.OAK_FENCE)));
+    public static final Block APPLE_SLAB = registerBlock("apple_slab", new SlabBlock(AbstractBlock.Settings.copy(Blocks.OAK_SLAB)));
+    public static final Block APPLE_PLANKS = registerBlock("apple_planks", new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
+    public static final Block APPLE_STAIRS = registerBlock("apple_stairs", new StairsBlock(APPLE_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.OAK_STAIRS)));
+    public static final Block APPLE_BUTTON = registerBlock("apple_button", new ButtonBlock(APPLE_SET_TYPE, 30, AbstractBlock.Settings.copy(Blocks.OAK_BUTTON).noCollision()));
+    public static final Block APPLE_SIGN = registerBlock("apple_sign", new TerraformSignBlock(Identifier.of(TLOTRMB, "entity/signs/apple"), AbstractBlock.Settings.copy(Blocks.OAK_SIGN).noCollision()));
+    public static final Block APPLE_WALL_SIGN = registerBlock("apple_wall_sign", new TerraformWallSignBlock(Identifier.of(TLOTRMB, "entity/signs/apple"), AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN).noCollision()));
+    public static final Block APPLE_HANGING_SIGN = registerBlock("apple_hanging_sign", new TerraformHangingSignBlock(Identifier.of(TLOTRMB, "entity/signs/hanging/apple"), Identifier.of(TLOTRMB, "textures/gui/hanging_signs/apple"), AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN).noCollision()));
+    public static final Block APPLE_WALL_HANGING_SIGN = registerBlock("apple_wall_hanging_sign", new TerraformWallHangingSignBlock(Identifier.of(TLOTRMB, "entity/signs/hanging/apple"), Identifier.of(TLOTRMB, "textures/gui/hanging_signs/apple"), AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN)));
+    public static final Block APPLE_TRAPDOOR = registerBlock("apple_trapdoor", new TrapdoorBlock(APPLE_SET_TYPE, AbstractBlock.Settings.copy(Blocks.OAK_TRAPDOOR).nonOpaque()));
+    public static final Block APPLE_DOOR = registerBlock("apple_door", new DoorBlock(APPLE_SET_TYPE, AbstractBlock.Settings.copy(Blocks.OAK_DOOR).nonOpaque()));
+    public static final Block APPLE_PRESSURE_PLATE = registerBlock("apple_pressure_plate", new PressurePlateBlock(APPLE_SET_TYPE, AbstractBlock.Settings.copy(Blocks.OAK_PRESSURE_PLATE)));
+    public static final Block APPLE_LEAVES = registerBlock("apple_leaves", new FruitingLeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never).blockVision(Blocks::never).nonOpaque().ticksRandomly(), "apple"));
+    public static final Block APPLE_SAPLING = registerBlock("apple_sapling", new SaplingBlock(ModMisc.APPLE_SAPLING_GENERATOR, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING).noCollision().nonOpaque().ticksRandomly()));
+
+
+    public static final Block PINE_LOG = registerLogBlock(MapColor.DARK_DULL_PINK, MapColor.PALE_GREEN, "pine_log");
+    public static final Block PINE_LOG_STRIPPED = registerLogBlock(MapColor.DARK_DULL_PINK, MapColor.PALE_GREEN, "pine_log_stripped");
+    public static final Block PINE_WOOD = registerLogBlock(MapColor.DARK_DULL_PINK, MapColor.PALE_GREEN, "pine_wood");
+    public static final Block PINE_WOOD_STRIPPED = registerLogBlock(MapColor.DARK_DULL_PINK, MapColor.PALE_GREEN, "pine_wood_stripped");
+    public static final Block PINE_FENCE_GATE = registerBlock("pine_fence_gate", new FenceGateBlock(PINE, AbstractBlock.Settings.copy(Blocks.OAK_FENCE_GATE)));
+    public static final Block PINE_FENCE = registerBlock("pine_fence", new FenceBlock(AbstractBlock.Settings.copy(Blocks.OAK_FENCE)));
+    public static final Block PINE_SLAB = registerBlock("pine_slab", new SlabBlock(AbstractBlock.Settings.copy(Blocks.OAK_SLAB)));
+    public static final Block PINE_PLANKS = registerBlock("pine_planks", new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
+    public static final Block PINE_STAIRS = registerBlock("pine_stairs", new StairsBlock(PINE_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.OAK_STAIRS)));
+    public static final Block PINE_BUTTON = registerBlock("pine_button", new ButtonBlock(PINE_SET_TYPE, 30, AbstractBlock.Settings.copy(Blocks.OAK_BUTTON).noCollision()));
+    public static final Block PINE_SIGN = registerBlock("pine_sign", new TerraformSignBlock(Identifier.of(TLOTRMB, "entity/signs/pine"), AbstractBlock.Settings.copy(Blocks.OAK_SIGN).noCollision()));
+    public static final Block PINE_WALL_SIGN = registerBlock("pine_wall_sign", new TerraformWallSignBlock(Identifier.of(TLOTRMB, "entity/signs/pine"), AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN).noCollision()));
+    public static final Block PINE_HANGING_SIGN = registerBlock("pine_hanging_sign", new TerraformHangingSignBlock(Identifier.of(TLOTRMB, "entity/signs/hanging/pine"), Identifier.of(TLOTRMB, "textures/gui/hanging_signs/pine"), AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN).noCollision()));
+    public static final Block PINE_WALL_HANGING_SIGN = registerBlock("pine_wall_hanging_sign", new TerraformWallHangingSignBlock(Identifier.of(TLOTRMB, "entity/signs/hanging/pine"), Identifier.of(TLOTRMB, "textures/gui/hanging_signs/pine"), AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN)));
+    public static final Block PINE_TRAPDOOR = registerBlock("pine_trapdoor", new TrapdoorBlock(PINE_SET_TYPE, AbstractBlock.Settings.copy(Blocks.OAK_TRAPDOOR).nonOpaque()));
+    public static final Block PINE_DOOR = registerBlock("pine_door", new DoorBlock(PINE_SET_TYPE, AbstractBlock.Settings.copy(Blocks.OAK_DOOR).nonOpaque()));
+    public static final Block PINE_PRESSURE_PLATE = registerBlock("pine_pressure_plate", new PressurePlateBlock(PINE_SET_TYPE, AbstractBlock.Settings.copy(Blocks.OAK_PRESSURE_PLATE)));
+    public static final Block PINE_LEAVES = registerBlock("pine_leaves", new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never).blockVision(Blocks::never).nonOpaque().ticksRandomly()));
+    public static final Block PINE_SAPLING = registerBlock("pine_sapling", new SaplingBlock(ModMisc.PINE_SAPLING_GENERATOR, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING).noCollision().nonOpaque().ticksRandomly()));
+
+
+
     public static Block registerLogBlock(MapColor topMapColor, MapColor sideMapColor, String name) {
 
         return Registry.register(Registries.BLOCK, Identifier.of(TLOTRMB, name), new PillarBlock(AbstractBlock.Settings.create().mapColor((state) -> {
@@ -126,6 +173,7 @@ public class ModBlocks {
     public static void onInitialize() {
 
         ((BushBlock)BLACKBERRY_BUSH_BLOCK).setPickStack(BLACKBERRY_ITEM);
+        ((BushBlock)STRAWBERRY_BUSH_BLOCK).setPickStack(STRAWBERRY_ITEM);
 
         LOGGER.info("The Lord of The Rings Mod: Biomes mod blocks initialized.");
     }

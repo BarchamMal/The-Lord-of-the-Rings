@@ -20,7 +20,7 @@ public class ModFlammableBlocks {
         registerFlammable(PLUM_FENCE, Blocks.OAK_FENCE);
         registerFlammable(PLUM_SLAB, Blocks.OAK_SLAB);
         registerFlammable(PLUM_STAIRS, Blocks.OAK_STAIRS);
-        registerFlammable(PLUM_PLANKS, Blocks.OAK_PLANKS);;
+        registerFlammable(PLUM_PLANKS, Blocks.OAK_PLANKS);
         registerFlammable(PLUM_PLANKS, Blocks.OAK_LEAVES);
 
         registerFlammable(OLIVE_LOG, Blocks.OAK_LOG);
@@ -31,7 +31,7 @@ public class ModFlammableBlocks {
         registerFlammable(OLIVE_FENCE, Blocks.OAK_FENCE);
         registerFlammable(OLIVE_SLAB, Blocks.OAK_SLAB);
         registerFlammable(OLIVE_STAIRS, Blocks.OAK_STAIRS);
-        registerFlammable(OLIVE_PLANKS, Blocks.OAK_PLANKS);;
+        registerFlammable(OLIVE_PLANKS, Blocks.OAK_PLANKS);
         registerFlammable(OLIVE_LEAVES, Blocks.OAK_LEAVES);
 
         registerFlammable(FIR_LOG, Blocks.OAK_LOG);
@@ -42,8 +42,31 @@ public class ModFlammableBlocks {
         registerFlammable(FIR_FENCE, Blocks.OAK_FENCE);
         registerFlammable(FIR_SLAB, Blocks.OAK_SLAB);
         registerFlammable(FIR_STAIRS, Blocks.OAK_STAIRS);
-        registerFlammable(FIR_PLANKS, Blocks.OAK_PLANKS);;
+        registerFlammable(FIR_PLANKS, Blocks.OAK_PLANKS);
         registerFlammable(FIR_LEAVES, Blocks.OAK_LEAVES);
+
+        registerFlammable(APPLE_LOG, Blocks.OAK_LOG);
+        registerFlammable(APPLE_LOG_STRIPPED, Blocks.STRIPPED_OAK_LOG);
+        registerFlammable(APPLE_WOOD, Blocks.OAK_WOOD);
+        registerFlammable(APPLE_WOOD_STRIPPED, Blocks.STRIPPED_OAK_WOOD);
+        registerFlammable(APPLE_FENCE_GATE, Blocks.OAK_FENCE_GATE);
+        registerFlammable(APPLE_FENCE, Blocks.OAK_FENCE);
+        registerFlammable(APPLE_SLAB, Blocks.OAK_SLAB);
+        registerFlammable(APPLE_STAIRS, Blocks.OAK_STAIRS);
+        registerFlammable(APPLE_PLANKS, Blocks.OAK_PLANKS);
+        registerFlammable(APPLE_PLANKS, Blocks.OAK_LEAVES);
+
+        registerFlammable(PINE_LOG, Blocks.OAK_LOG);
+        registerFlammable(PINE_LOG_STRIPPED, Blocks.STRIPPED_OAK_LOG);
+        registerFlammable(PINE_WOOD, Blocks.OAK_WOOD);
+        registerFlammable(PINE_WOOD_STRIPPED, Blocks.STRIPPED_OAK_WOOD);
+        registerFlammable(PINE_FENCE_GATE, Blocks.OAK_FENCE_GATE);
+        registerFlammable(PINE_FENCE, Blocks.OAK_FENCE);
+        registerFlammable(PINE_SLAB, Blocks.OAK_SLAB);
+        registerFlammable(PINE_STAIRS, Blocks.OAK_STAIRS);
+        registerFlammable(PINE_PLANKS, Blocks.OAK_PLANKS);
+        registerFlammable(PINE_LEAVES, Blocks.OAK_LEAVES);
+
 
     }
 

@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "the-lord-of-the-rings-mod-biomes:block/{wood_type}_leaves_stage_0"
+      },
+      {
+        "model": "the-lord-of-the-rings-mod-biomes:block/{wood_type}_leaves_stage_0v1"
+      }
+    ]
+  }
+}

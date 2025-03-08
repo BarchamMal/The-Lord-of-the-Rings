@@ -1,4 +1,6 @@
 woods:
-  - plum: true
-  - olive: true
-  - fir: false
+  - plum: fruiting
+  - olive: fruiting
+  - fir: non-fruiting
+  - apple: fruiting
+  - pine: non-fruiting-var

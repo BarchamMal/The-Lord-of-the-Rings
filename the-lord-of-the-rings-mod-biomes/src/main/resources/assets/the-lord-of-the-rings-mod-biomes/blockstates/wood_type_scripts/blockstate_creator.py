@@ -5,7 +5,8 @@ import yaml
 def create_blockstate(template_path, output_path, wood_type, config):
     if config['delete']:
         print(f"Deleting blockstate: {output_path}")
-        os.remove(output_path)
+        try: os.remove(output_path)
+        except: pass
         return
     elif os.path.exists(output_path):
         print(f"Replacing blockstate: {output_path}")
@@ -22,13 +23,15 @@ def create_blockstate(template_path, output_path, wood_type, config):
     with open(output_path, 'w') as output_file:
         output_file.write(template_content)
 
-def process_woods(yaml_file, output_dir, template_dir, config):
+def process_woods(yaml_file, output_dir, template_dir, config_file):
     with open(yaml_file, 'r') as file:
         woods = yaml.safe_load(file)['woods']
     
-    with open(config, 'r') as file:
-        config = yaml.safe_load(file)['blockstate_creator']
+    with open(config_file, 'r') as file:
+        config = yaml.safe_load(file)
     
+    blockstate_config = config['blockstate_creator']
+    name_map = blockstate_config['name']
     blockstate_types = [
         "button", "door", "fence_gate", "fence",
         "hanging_sign", "leaves", "log",
@@ -42,17 +45,18 @@ def process_woods(yaml_file, output_dir, template_dir, config):
         os.makedirs(output_dir)
 
     for wood in woods:
-        for wood_type, fruiting in wood.items():
+        for wood_type, tree_type in wood.items():
             for blockstate_type in blockstate_types:
                 template_name = f"{blockstate_type}.json"
                 
-                # Handle fruiting leaves differently
-                if blockstate_type == "leaves" and fruiting:
-                    template_name = "fruiting_leaves.json"
+                # Use mapping for leaves
+                if blockstate_type == "leaves" and tree_type in name_map:
+                    template_name = f"{name_map[tree_type]}.json"
                 
                 template_path = os.path.join(template_dir, template_name)
                 output_path = os.path.join(output_dir, f"{wood_type}_{blockstate_type}.json")
-                create_blockstate(template_path, output_path, wood_type, config)
+                
+                create_blockstate(template_path, output_path, wood_type, blockstate_config)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate wood block states.")
