@@ -25,3 +25,6 @@ Take a look at the TODO.md file in each one for what needs done.
 > [!IMPORTANT]
 > I am now finding that my art skills leave ***much** to be desired*!
 > If you know how to make pixel art please take a look at the existing textures and improve them if you can!
+
+> [!NOTE]
+> Umm, this is all well and good, but if you want to see an open sourced project which actually is a lot further down the road, check out the [Middle-Earth](https://www.curseforge.com/minecraft/mc-mods/middle-earth) mod by @Jukoz. I am not affiliated with them, but their mod is amazing!
